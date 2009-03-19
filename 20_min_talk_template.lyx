@@ -103,9 +103,9 @@ In principle, this file can be redistributed and/or modified under the terms
 \end_layout
 
 \begin_layout Title
-Title As It Is In the Proceedings
+Extensible Provisioning Protocol
 \begin_inset OptArg
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Short Paper Title 
@@ -126,146 +126,7 @@ optional, use only with long paper titles
 
 \end_layout
 
-\begin_layout Subtitle
-Include Only If Paper Has a Subtitle
-\end_layout
-
-\begin_layout Author
-F.
-\begin_inset space ~
-\end_inset
-
-Author
-\begin_inset Flex InstituteMark
-status open
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-and
-\end_layout
-
-\end_inset
-
- S.
-\begin_inset space ~
-\end_inset
-
-Another
-\begin_inset Flex InstituteMark
-status collapsed
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- Give the names in the same order as the appear in the paper.
- 
-\end_layout
-
-\begin_layout Plain Layout
-- Use the 
-\backslash
-inst{?} command only if the authors have different affiliations.
-\end_layout
-
-\end_inset
-
-
-\begin_inset OptArg
-status open
-
-\begin_layout Plain Layout
-Author, Another
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- optional, use only with lots of authors
-\end_layout
-
-\begin_layout Plain Layout
-- if there are reallylots of authors, use 
-\begin_inset Quotes eld
-\end_inset
-
-Author et al.
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Institute
-\begin_inset Flex InstituteMark
-status collapsed
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-
-Department of Computer Science
-\end_layout
-
 \begin_layout Date
-University of Somewhere
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-and
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Flex InstituteMark
-status collapsed
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-Department of Theoretical Philosophy
-\end_layout
-
-\begin_layout Date
-University of Elsewhere
 \begin_inset Note Note
 status open
 
@@ -283,7 +144,7 @@ inst command only if there are several affiliations.
 
 
 \begin_inset OptArg
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Universities of Somewhere and Elsewhere
@@ -305,9 +166,8 @@ optional, but mostly needed
 \end_layout
 
 \begin_layout Date
-Conference on Fabulous Presentations, 2003
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 - Either use conference name or its abbreviation.
@@ -322,34 +182,11 @@ status open
 \end_inset
 
 
-\begin_inset OptArg
-status open
-
-\begin_layout Plain Layout
-CFP 2003
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-optional, should be abbreviation of conference name
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 If you have a file called "institution-logo-filename.xxx", where xxx is a
@@ -393,7 +230,7 @@ pgfuseimage{institution-logo}}
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 The following causes the table of contents to be shown at the beginning
@@ -475,7 +312,7 @@ tableofcontents[currentsection,currentsubsection]
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 If you wish to uncover everything in a step-wise fashion, uncomment the
@@ -566,13 +403,13 @@ Structuring a talk is a difficult task and the following structure may not
 \end_layout
 
 \begin_layout Section
-Motivation
+Introduction
 \end_layout
 
 \begin_layout Subsection
-The Basic Problem That We Studied
+Domain Registration Protocols
 \begin_inset OptArg
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Basic Problem
@@ -584,13 +421,10 @@ Basic Problem
 \end_layout
 
 \begin_layout BeginFrame
-Make Titles Informative.
- Use Uppercase Letters.
+No Common Transport
 \end_layout
 
 \begin_layout FrameSubtitle
-Frame subtitles are optional.
- Use upper- or lowercase letters.
 \begin_inset Note Note
 status open
 
@@ -606,7 +440,7 @@ status open
 \end_layout
 
 \begin_layout Itemize
-Use Itemize a lot.
+Fax
 \end_layout
 
 \begin_deeper
@@ -616,7 +450,7 @@ Use Itemize a lot.
 
 \end_deeper
 \begin_layout Itemize
-Use very short sentences or short phrases.
+Email.
 \end_layout
 
 \begin_deeper
@@ -626,7 +460,7 @@ Use very short sentences or short phrases.
 
 \end_deeper
 \begin_layout Itemize
-These overlays are created using the Pause style.
+Real-time (HTTP, SOAP, TCP-based).
 \end_layout
 
 \begin_layout BeginFrame
