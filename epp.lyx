@@ -128,7 +128,7 @@ optional, use only with long paper titles
 
 \begin_layout Date
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 - Use the 
@@ -186,7 +186,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 If you have a file called "institution-logo-filename.xxx", where xxx is a
@@ -207,7 +207,8 @@ status open
 
 %
 \backslash
-pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+pgfdeclareimage[height=0.5cm]{ud-logo}{/Users/holton/workspace/lyx_projects/epp_t
+alk/images/logo_ud.png}
 \end_layout
 
 \begin_layout Plain Layout
@@ -220,7 +221,7 @@ pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
 \backslash
 logo{
 \backslash
-pgfuseimage{institution-logo}}
+pgfuseimage{ud-logo}}
 \end_layout
 
 \end_inset
@@ -229,8 +230,12 @@ pgfuseimage{institution-logo}}
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 The following causes the table of contents to be shown at the beginning
