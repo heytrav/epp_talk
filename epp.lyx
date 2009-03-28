@@ -230,10 +230,6 @@ pgfuseimage{ud-logo}}
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -412,9 +408,9 @@ Introduction
 \end_layout
 
 \begin_layout Subsection
-Domain Registration Protocols
+Communicating with Domain Registries
 \begin_inset OptArg
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Basic Problem
@@ -426,7 +422,7 @@ Basic Problem
 \end_layout
 
 \begin_layout BeginFrame
-No Common Transport
+No Standards for Communication
 \end_layout
 
 \begin_layout FrameSubtitle
@@ -455,7 +451,7 @@ Fax
 
 \end_deeper
 \begin_layout Itemize
-Email.
+Computer-parseable email.
 \end_layout
 
 \begin_deeper
@@ -469,13 +465,12 @@ Real-time (HTTP, SOAP, TCP-based).
 \end_layout
 
 \begin_layout BeginFrame
-Make Titles Informative.
- 
+No Standard Language 
 \end_layout
 
 \begin_layout Itemize
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -484,26 +479,12 @@ status collapsed
 
 \end_inset
 
-You can also use overlay specifications to create overlays.
+Individual registry syntax.
 \end_layout
 
 \begin_layout Itemize
 \begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<3->
-\end_layout
-
-\end_inset
-
-This allows you to present things in any order.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -512,7 +493,21 @@ status collapsed
 
 \end_inset
 
-This is shown second.
+Key-value (RRP, RRI).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+EPP.
 \end_layout
 
 \begin_layout BeginFrame
