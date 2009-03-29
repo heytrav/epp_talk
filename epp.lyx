@@ -103,7 +103,7 @@ In principle, this file can be redistributed and/or modified under the terms
 \end_layout
 
 \begin_layout Title
-Extensible Provisioning Protocol
+Extensible Provisioning Protocol (EPP)
 \begin_inset OptArg
 status collapsed
 
@@ -408,12 +408,12 @@ Introduction
 \end_layout
 
 \begin_layout Subsection
-Communicating with Domain Registries
+Communicating with Registries (or trying to at least)
 \begin_inset OptArg
 status open
 
 \begin_layout Plain Layout
-Basic Problem
+Lack of Communication Standards
 \end_layout
 
 \end_inset
@@ -422,12 +422,12 @@ Basic Problem
 \end_layout
 
 \begin_layout BeginFrame
-No Standards for Communication
+No Standard for Communication
 \end_layout
 
 \begin_layout FrameSubtitle
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 - A title should summarize the slide in an understandable fashion for anyone
@@ -479,10 +479,10 @@ status open
 
 \end_inset
 
-Individual registry syntax.
+Registry-specific syntax.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Block
 \begin_inset ERT
 status open
 
@@ -493,23 +493,41 @@ status open
 
 \end_inset
 
-Key-value (RRP, RRI).
-\end_layout
 
-\begin_layout Itemize
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<3->
+{
 \end_layout
 
 \end_inset
 
-EPP.
+Key-value: Key-Systems, DENIC
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+command=StatusDomain
+\end_layout
+
+\begin_layout LyX-Code
+domain=something.com
+\end_layout
+
+\end_deeper
 \begin_layout BeginFrame
 Make Titles Informative.
 \end_layout
