@@ -482,6 +482,34 @@ status open
 Registry-specific syntax.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Key-value syntax (Key-Systems, DENIC)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+XML-based
+\end_layout
+
 \begin_layout Block
 \begin_inset ERT
 status open
@@ -504,7 +532,7 @@ status open
 
 \end_inset
 
-Key-value: Key-Systems, DENIC
+
 \begin_inset ERT
 status open
 
@@ -520,11 +548,69 @@ status open
 
 \begin_deeper
 \begin_layout LyX-Code
-command=StatusDomain
+command=createDomain
 \end_layout
 
 \begin_layout LyX-Code
 domain=something.com
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{<}
+\end_layout
+
+\end_inset
+
+epp: something
 \end_layout
 
 \end_deeper
