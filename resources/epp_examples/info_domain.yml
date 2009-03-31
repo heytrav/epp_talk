@@ -1,0 +1,22 @@
+---
+client_transaction_id: 123746900945
+query_response:
+  domain:
+    auth_info: {}
+    client_id: 5731674
+    contacts:
+      - id: 6051296
+        type: tech
+    hosts: []
+    name: qingyu.ch
+    nameservers:
+      - host: server1-ns2.udagdns.net
+      - host: server1-ns1.udagdns.net
+      - host: server1-ns3.udagdns.net
+    object_expire_date: 2009-10-31T00:00:00+01:00
+    registrant: 13127972
+    roid: D2906145-SWITCH
+result_code: 1000
+return_message:
+  - Command completed successfully
+server_unique_id: 20090319.719491.15651844

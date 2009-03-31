@@ -1,0 +1,29 @@
+---
+client_transaction_id: 123746901019
+query_response:
+  contact:
+    client_id: 5731674
+    create_date: 2008-10-23T15:31:46+02:00
+    creator_id: 5731674
+    email: fs@delta-improve.com
+    id: 13127972
+    postal_info:
+      - address:
+          city: Wachtberg
+          country_code: DE
+          postcode: 53343
+          street:
+            - Am Spritzenh
+            - 'äuschen 6 '
+        name: Schaefer Frank
+        organization: Delta Improve
+        type: loc
+    roid: C13127972-SWITCH
+    status:
+      - s: ok
+      - s: linked
+    telephone: +49.2289348516
+result_code: 1000
+return_message:
+  - Command completed successfully
+server_unique_id: 20090319.719491.15651845
