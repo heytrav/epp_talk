@@ -9,6 +9,8 @@
 
 \setbeamercovered{transparent}
 % or whatever (possibly just delete it)
+
+\usepackage{pgfnodes,pgfarrows,pgfheaps}
 \end_preamble
 \use_default_options false
 \language english
@@ -416,12 +418,12 @@ The Big Picture
 \end_layout
 
 \begin_layout Subsection
-Communicating with Registries: No Uniform Standards
+The Communication Barrier
 \begin_inset OptArg
 status open
 
 \begin_layout Plain Layout
-No Standard Registration Protocols
+Communication Barrier
 \end_layout
 
 \end_inset
@@ -505,7 +507,7 @@ Socket-based
 
 \end_deeper
 \begin_layout BeginFrame
-No Standard Format 
+No Standard Data Format 
 \end_layout
 
 \begin_layout Block
@@ -632,7 +634,237 @@ tech1=P-ABCD
 
 \end_deeper
 \begin_layout BeginFrame
-No Standard Syntax or Semantics
+No Standard Semantics
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Persons Attached to a Domain
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DENIC/AFNIC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nominet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The Rest
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Handle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Account
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Contact
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Who does the domain belong to?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DENIC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Afnic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Key-Systems
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nominet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+holder
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+client
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+owner-c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+admin
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+No Standard Data format
 \end_layout
 
 \begin_layout Block
@@ -657,10 +889,7 @@ status open
 
 \end_inset
 
-
-RRP (Key-Systems
-\lang english
-)
+RRP (Key-Systems)
 \begin_inset ERT
 status open
 
@@ -723,10 +952,7 @@ status open
 
 \end_inset
 
-RRI
- (DENIC)
-\lang english
-
+RRI (DENIC)
 \begin_inset ERT
 status open
 
@@ -755,11 +981,26 @@ TECHC:  DENIC-228-lkjlkjlkj
 Finding a Uniform Protocol
 \end_layout
 
+\begin_layout Subsection
+Introducing EPP
+\end_layout
+
 \begin_layout BeginFrame
 Enter EPP
 \end_layout
 
 \begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -793,17 +1034,1062 @@ To create a robust and flexible protocol that could provide communication
 
 \end_deeper
 \begin_layout Itemize
-XML - a structured, text-based format
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+XML - Structured text-based format
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
 Flexible network transport
 \end_layout
 
-\begin_layout Subsection
-Previous Work
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
 \end_layout
 
+\end_inset
+
+TCP Sockets
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+SOAP
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+SMTP
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+EPP in a nutshell
+\end_layout
+
+\begin_layout BeginFrame
+Basic Objects and Operations
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Objects
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Domain
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Contact
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Host (nameserver)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+NSGroup (EURID, DNSBE)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+Account (Nominet)
+\end_layout
+
+\end_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Operations
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+Poll
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+Check
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+Info
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+Create
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+Delete
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+Update
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+Transfer
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<7->
+\end_layout
+
+\end_inset
+
+Trade (EURID, DNSBE)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<8->
+\end_layout
+
+\end_inset
+
+Withdraw (NICAT)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+The Boring Part
+\end_layout
+
+\begin_layout Subsection
+The Gritty Details
+\begin_inset OptArg
+status open
+
+\begin_layout Plain Layout
+EPP: Technical Mumbo Jumbo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+XML: Short and (kind of) painless
+\end_layout
+
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+XML
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+e
+\emph on
+\noun on
+X
+\emph default
+\noun default
+tensible 
+\emph on
+\noun on
+M
+\emph default
+\noun default
+arkup 
+\emph on
+\noun on
+L
+\emph default
+\noun default
+anguage
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Advantages
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Text-based
+\end_layout
+
+\begin_layout Itemize
+Computer parseable
+\end_layout
+
+\begin_layout Itemize
+Human Readable
+\end_layout
+
+\begin_layout Itemize
+Represent Structure Data
+\end_layout
+
+\end_deeper
+\begin_layout Column
+5cm
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Disadvantages
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Very wordy (bandwidth & storage issues)
+\end_layout
+
+\begin_layout Itemize
+Looks scary
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout BeginFrame
+Talking the Talk
+\end_layout
+
+\begin_layout Example
+The 
+\family typewriter
+login
+\family default
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"      
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+   <command>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      <login>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <clID>5731674</clID>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <pw>YoCAHY&amp;4A</pw>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <options>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+            <version>1.0</version>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+            <lang>en</lang>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         </options>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+       <svcs>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+       </svcs>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      </login>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+    <clTRID>ud-reloaded-epp</clTRID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+  </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+</epp>
+\size default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+EPP Chat
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{pgfpicture}{-0.5cm}{0cm}{8cm}{5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+pgfputat{
+\backslash
+pgfxy(0,4)}{Client}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+uncover<2->{
+\backslash
+pgfputat{
+\backslash
+pgfxy(6,4)}{Server}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<3->{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+pgfputat{
+\backslash
+pgfxy(7,2)}{login}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+pgfputat{
+\backslash
+pgfxy(1.75,2.5)}{Reply}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{structure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+pgfsetendarrow{
+\backslash
+pgfarrowto}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+pgfxycurve(1.75,3.5)(1.75,3.75)(0,3.5)(0,3.85)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+uncover<2->{
+\backslash
+pgfxycurve(1.75,1.5)(1.75,1)(0,1.5)(0,1.05)}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+uncover<3->{
+\backslash
+pgfxycurve(2.65,2.5)(3.75,2.5)(7,1)(7,1.9)}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{pgfpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Last Part
+\end_layout
+
+\begin_layout Subsection
+The Current Trend
+\begin_inset OptArg
+status open
+
+\begin_layout Plain Layout
+Trend towards EPP
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+EPP for the Masses
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+Number of registries that base their communication on EPP is increasing.
+ Therefore, usage at united-domains AG will also increase.
+\end_layout
+
+\end_deeper
+\begin_layout FrameSubtitle
+What does this mean for us?
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+3cm
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Since 2006
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+eu
+\end_layout
+
+\begin_layout Itemize
+be
+\end_layout
+
+\begin_layout Itemize
+at
+\end_layout
+
+\end_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+2009
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ch
+\end_layout
+
+\begin_layout Itemize
+uk
+\end_layout
+
+\begin_layout Itemize
+se
+\end_layout
+
+\begin_layout Itemize
+fr
+\end_layout
+
+\begin_layout Itemize
+nl
+\end_layout
+
+\begin_layout Itemize
+gTLDs
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout BeginFrame
 Make Titles Informative.
  
