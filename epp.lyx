@@ -11,6 +11,142 @@
 % or whatever (possibly just delete it)
 
 \usepackage{pgfnodes,pgfarrows,pgfheaps}
+
+
+\pgfdeclareimage[width=0.6cm]{icsi-logo}{beamer-icsi-logo}
+\logo{\pgfuseimage{icsi-logo}}
+
+
+
+
+\newcommand{\Class}[1]{\operatorname{\mathchoice
+  {\text{\small #1}}
+  {\text{\small #1}}
+  {\text{#1}}
+  {\text{#1}}}}
+
+\newcommand{\Lang}[1]{\operatorname{\text{\textsc{#1}}}}
+
+\newcommand{\tape}[3]{%
+  \color{structure!30!bg}
+  \pgfmoveto{\pgfxy(-0.5,0)}
+  \pgflineto{\pgfxy(-0.6,0.1)}
+  \pgflineto{\pgfxy(-0.4,0.2)}
+  \pgflineto{\pgfxy(-0.6,0.3)}
+  \pgflineto{\pgfxy(-0.4,0.4)}
+  \pgflineto{\pgfxy(-0.5,0.5)}
+  \pgflineto{\pgfxy(4,0.5)}
+  \pgflineto{\pgfxy(4.1,0.4)}
+  \pgflineto{\pgfxy(3.9,0.3)}
+  \pgflineto{\pgfxy(4.1,0.2)}
+  \pgflineto{\pgfxy(3.9,0.1)}
+  \pgflineto{\pgfxy(4,0)}
+  \pgfclosepath
+  \pgffill
+
+  \color{structure}  
+  \pgfputat{\pgfxy(0,0.7)}{\pgfbox[left,base]{#1}}
+  \pgfputat{\pgfxy(0,-0.1)}{\pgfbox[left,top]{#2}}
+
+  \color{black}
+  \pgfputat{\pgfxy(-.1,0.25)}{\pgfbox[left,center]{\texttt{#3}}}%
+}
+
+\newcommand{\shorttape}[3]{%
+  \color{structure!30!bg}
+  \pgfmoveto{\pgfxy(-0.5,0)}
+  \pgflineto{\pgfxy(-0.6,0.1)}
+  \pgflineto{\pgfxy(-0.4,0.2)}
+  \pgflineto{\pgfxy(-0.6,0.3)}
+  \pgflineto{\pgfxy(-0.4,0.4)}
+  \pgflineto{\pgfxy(-0.5,0.5)}
+  \pgflineto{\pgfxy(1,0.5)}
+  \pgflineto{\pgfxy(1.1,0.4)}
+  \pgflineto{\pgfxy(0.9,0.3)}
+  \pgflineto{\pgfxy(1.1,0.2)}
+  \pgflineto{\pgfxy(0.9,0.1)}
+  \pgflineto{\pgfxy(1,0)}
+  \pgfclosepath
+  \pgffill
+
+  \color{structure}  
+  \pgfputat{\pgfxy(0.25,0.7)}{\pgfbox[center,base]{#1}}
+  \pgfputat{\pgfxy(0.25,-0.1)}{\pgfbox[center,top]{#2}}
+
+  \color{black}
+  \pgfputat{\pgfxy(-.1,0.25)}{\pgfbox[left,center]{\texttt{#3}}}%
+}
+
+\pgfdeclareverticalshading{heap1}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!65!white)}
+\pgfdeclareverticalshading{heap2}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!55!white)}
+\pgfdeclareverticalshading{heap3}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!45!white)}
+\pgfdeclareverticalshading{heap4}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!35!white)}
+\pgfdeclareverticalshading{heap5}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!25!white)}
+\pgfdeclareverticalshading{heap6}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(red!35!white)}
+
+\newcommand{\heap}[5]{%
+  \begin{pgfscope}
+    \color{#4}
+    \pgfheappath{\pgfxy(0,#1)}{\pgfxy(-#2,0)}{\pgfxy(#2,0)}
+    \pgfclip
+    \begin{pgfmagnify}{1}{#1}
+      \pgfputat{\pgfpoint{-.5\paperwidth}{0pt}}{\pgfbox[left,base]{\pgfuseshading{heap#5}}}
+    \end{pgfmagnify}
+  \end{pgfscope}
+  %\pgffill
+  
+  \color{#4}
+  \pgfheappath{\pgfxy(0,#1)}{\pgfxy(-#2,0)}{\pgfxy(#2,0)}
+  \pgfstroke
+
+  \color{white}
+  \pgfheaplabel{\pgfxy(0,#1)}{#3}%
+}
+
+
+\newcommand{\langat}[2]{%
+  \color{black!30!beamerexample}
+  \pgfsetlinewidth{0.6pt}
+  \pgfsetendarrow{\pgfarrowdot}
+  \pgfline{\pgfxy(-3.5,#1)}{\pgfxy(0.05,#1)}
+  \color{beamerexample}
+  \pgfputat{\pgfxy(-3.6,#1)}{\pgfbox[right,center]{#2}}%
+}
+
+\newcommand{\langatother}[2]{%
+  \color{black!30!beamerexample}
+  \pgfsetlinewidth{0.6pt}
+  \pgfsetendarrow{\pgfarrowdot}
+  \pgfline{\pgfxy(3.5,#1)}{\pgfxy(-0.05,#1)}
+  \color{beamerexample}
+  \pgfputat{\pgfxy(3.6,#1)}{\pgfbox[left,center]{#2}}%
+}
+
+
+%\pgfdeclaremask{knight1-mask}{beamer-knight1-mask} \pgfdeclareimage[height=2cm,mask=knight1-mask]{knight1}{beamer-knight1} \pgfdeclaremask{knight2-mask}{beamer-knight2-mask} \pgfdeclareimage[height=2cm,mask=knight2-mask]{knight2}{beamer-knight2} \pgfdeclaremask{knight3-mask}{beamer-knight3-mask} \pgfdeclareimage[height=2cm,mask=knight3-mask,interpolate=true]{knight3}{beamer-knight3} \pgfdeclaremask{knight4-mask}{beamer-knight4-mask} \pgfdeclareimage[height=2cm,mask=knight4-mask,interpolate=true]{knight4}{beamer-knight4}
+
+
+\pgfdeclareradialshading{graphnode}
+  {\pgfpoint{-3pt}{3.6pt}}%
+  {color(0cm)=(beamerexample!15);
+    color(2.63pt)=(beamerexample!75);
+    color(5.26pt)=(beamerexample!70!black);
+    color(7.6pt)=(beamerexample!50!black);
+    color(8pt)=(beamerexample!10!bg)}
+
+\newcommand{\graphnode}[2]{
+  \pgfnodecircle{#1}[virtual]{#2}{8pt}
+  \pgfputat{#2}{\pgfbox[center,center]{\pgfuseshading{graphnode}}}
+}
+
+
+\pgfdeclareimage[height=0.5cm]{net-server}{/Users/holton/workspace/lyx_projects/epp_talk/images/network-server.png}
 \end_preamble
 \use_default_options false
 \language english
@@ -1732,8 +1868,6 @@ login
 
 \size scriptsize
 </epp>
-\size default
- 
 \end_layout
 
 \end_deeper
@@ -1754,7 +1888,11 @@ begin{pgfpicture}{-0.5cm}{0cm}{8cm}{5cm}
 
 \begin_layout Plain Layout
 
-  
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
 \backslash
 pgfputat{
 \backslash
@@ -1768,12 +1906,19 @@ pgfxy(0,4)}{Client}
 \begin_layout Plain Layout
 
    
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 uncover<2->{
 \backslash
 pgfputat{
 \backslash
-pgfxy(6,4)}{Server}}
+pgfxy(0,4)}{
+\backslash
+shorttape{}{}{UDAG}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1781,41 +1926,27 @@ pgfxy(6,4)}{Server}}
 
 \backslash
 uncover<3->{
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
 \backslash
 pgfputat{
 \backslash
-pgfxy(7,2)}{login}
+pgfxy(7,4)}{
+\backslash
+shorttape{}{}{Registry}}}
 \end_layout
 
 \begin_layout Plain Layout
 
-\end_layout
 
-\begin_layout Plain Layout
-
-    
+\backslash
+uncover<4->{
 \backslash
 pgfputat{
 \backslash
-pgfxy(1.75,2.5)}{Reply}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
+pgfxy(1.75,2.5)}{
+\backslash
+pgfbox[center,center]{
+\backslash
+pgfuseimage{net-server}}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1850,7 +1981,7 @@ pgfarrowto}
 
   
 \backslash
-pgfxycurve(1.75,3.5)(1.75,3.75)(0,3.5)(0,3.85)
+pgfxycurve(0.5,3.9)(2,3.9)(5,3.9)(6.9,4)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2065,26 +2196,88 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
+
+\color red
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
 ch
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
 uk
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
 se
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
 fr
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
 nl
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<7->
+\end_layout
+
+\end_inset
+
 gTLDs
 \end_layout
 
