@@ -1540,12 +1540,12 @@ The Boring Part
 \end_layout
 
 \begin_layout Subsection
-The Gritty Details
+XML
 \begin_inset OptArg
 status open
 
 \begin_layout Plain Layout
-EPP: Technical Mumbo Jumbo
+EPP serialization
 \end_layout
 
 \end_inset
@@ -1731,146 +1731,10 @@ Looks scary
 
 \end_deeper
 \end_deeper
-\begin_layout BeginFrame
-Talking the Talk
+\begin_layout Subsection
+Client-Registry EPP Communication
 \end_layout
 
-\begin_layout Example
-The 
-\family typewriter
-login
-\family default
- command
-\end_layout
-
-\begin_deeper
-\begin_layout LyX-Code
-
-\size scriptsize
-<?xml version="1.0" encoding="UTF-8"?> 
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"      
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">   
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-   <command>     
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-      <login>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-         <clID>5731674</clID>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-         <pw>YoCAHY&amp;4A</pw>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-         <options>         
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-            <version>1.0</version>         
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-            <lang>en</lang>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-         </options>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-       <svcs>         
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-           <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>         
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-           <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>         
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-           <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-       </svcs>     
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-      </login>     
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-    <clTRID>ud-reloaded-epp</clTRID>   
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-  </command> 
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-</epp>
-\end_layout
-
-\end_deeper
 \begin_layout BeginFrame
 EPP Dialogue
 \end_layout
@@ -2338,7 +2202,7 @@ status open
 
 
 \backslash
-onslide<4,6,8,10,12,14,16>
+onslide<4,6,8>
 \end_layout
 
 \end_inset
@@ -2482,6 +2346,218 @@ login
 \end_layout
 
 \end_deeper
+\begin_layout Example
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<10,12,14>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The 
+\family typewriter
+\size small
+info contact
+\family default
+\size default
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"             
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      xmlns:contact="urn:ietf:params:xml:ns:contact-1.0"
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      epp-1.0.xsd urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+   <command>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+       <info>      
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+          <contact:info>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+             <contact:id>6051296</contact:id>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+          </contact:info>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      </info>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      <clTRID>123746901055</clTRID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+</epp>
+\size default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<16>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The 
+\family typewriter
+\size small
+logout
+\family default
+\size default
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+         xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+         epp-1.0.xsd">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  <command>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+     <logout />     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  <clTRID>ud-reloaded-epp</clTRID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+</epp> 
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 Last Part
@@ -2544,7 +2620,6 @@ status open
 \begin_deeper
 \begin_layout Quote
 Number of registries that base their communication on EPP is increasing.
- Therefore, usage at united-domains AG will also increase.
 \end_layout
 
 \end_deeper
@@ -2653,8 +2728,6 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
-
-\color red
 \begin_inset ERT
 status open
 
@@ -2740,124 +2813,6 @@ gTLDs
 
 \end_deeper
 \end_deeper
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Example
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-On first slide.
- 
-\end_layout
-
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Example
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-On second slide.
-\end_layout
-
-\begin_layout Section
-Our Results/Contribution
-\end_layout
-
-\begin_layout Subsection
-Main Results
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Theorem
-On first slide.
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Corollary
-On second slide.
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Theorem
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-In left column.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Basic Ideas for Proofs/Implementations
-\end_layout
-
 \begin_layout Section*
 Summary
 \end_layout
@@ -2867,78 +2822,23 @@ Summary
 \end_layout
 
 \begin_layout Itemize
-The
+
 \color none
- 
-\color red
-first main message
-\color none
- of your talk in one or two lines.
+Few standard domain registration protocols
 \end_layout
 
 \begin_layout Itemize
-The
+
 \color none
- 
-\color red
-second main message
-\color none
- of your talk in one or two lines.
+EPP is promising effort to improve situation.
 \end_layout
 
 \begin_layout Itemize
-Perhaps a
+
 \color none
- 
-\color red
-third message
-\color none
-, but not more than that.
+Several major registries switching to EPP
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-An outlook is always optional.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-vskip0pt plus.5fill
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Outlook
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-What we have not done yet.
-\end_layout
-
-\begin_layout Itemize
-Even more stuff.
-\end_layout
-
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -2975,144 +2875,14 @@ status collapsed
 For Further Reading
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatebookbibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Start with overview books.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "Author1990"
-
-\end_inset
-
-A.
- Author.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
+key "key-1"
 
 \end_inset
 
 
-\emph on
-Handbook of Everything
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Some Press, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Followed by interesting articles.
- Keep the list short.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Someone2002"
-
-\end_inset
-
-S.
- Someone.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- On this and that
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Journal on This and That
-\emph default
-.
- 2(1):50--100, 2000.
 \end_layout
 
 \begin_layout EndFrame
