@@ -1875,6 +1875,27 @@ login
 EPP Chat
 \end_layout
 
+\begin_layout Overprint
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<2,3,5,7,9>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1888,65 +1909,132 @@ begin{pgfpicture}{-0.5cm}{0cm}{8cm}{5cm}
 
 \begin_layout Plain Layout
 
-\end_layout
 
-\begin_layout Plain Layout
-
- 
 \backslash
-pgfputat{
-\backslash
-pgfxy(0,4)}{Client}
-\end_layout
-
-\begin_layout Plain Layout
-
+only<2,3,5,7,9>{
 \end_layout
 
 \begin_layout Plain Layout
 
    
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<2->{
 \backslash
 pgfputat{
 \backslash
-pgfxy(0,4)}{
+pgfxy(0.5,4.5)}{
 \backslash
-shorttape{}{}{UDAG}}}
+shorttape{}{}{UDAG}}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+   %
 \backslash
-uncover<3->{
+pgfputat{
+\backslash
+pgfxy(0.5,4)}{
+\backslash
+includegraphics{images/network-server.png}}
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\backslash
+pgfputat{
+\backslash
+pgfxy(7,4.5)}{
+\backslash
+tape{}{
+\backslash
+includegraphics{images/network-server.png}}{Registry}}
+\end_layout
+
+\begin_layout Plain Layout
+
+   %
 \backslash
 pgfputat{
 \backslash
 pgfxy(7,4)}{
 \backslash
-shorttape{}{}{Registry}}}
+includegraphics{images/network-server.png}}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-uncover<4->{
-\backslash
 pgfputat{
 \backslash
 pgfxy(1.75,2.5)}{
 \backslash
-pgfbox[center,center]{
+pgfbox[center,center]{hello}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-pgfuseimage{net-server}}}}
+only<3>{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<5,7,9>{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+pgfputat{
+\backslash
+pgfxy(0.5,2)}{
+\backslash
+tape{}{}{}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<7,9>{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+pgfputat{
+\backslash
+pgfxy(7,2)}{
+\backslash
+tape{}{}{}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1981,7 +2069,31 @@ pgfarrowto}
 
   
 \backslash
-pgfxycurve(0.5,3.9)(2,3.9)(5,3.9)(6.9,4)
+only<3>{
+\backslash
+pgfxycurve(6,3.9)(5,3.9)(4,3.9)(2,3.9)}
+\end_layout
+
+\begin_layout Plain Layout
+
+   %
+\backslash
+put(30,10){
+\backslash
+vector(-1,0){20}}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+only<3>{
+\backslash
+pgfxycurve(0.5,3.9)()()()}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1992,9 +2104,9 @@ pgfxycurve(0.5,3.9)(2,3.9)(5,3.9)(6.9,4)
 
   
 \backslash
-uncover<2->{
+only<5>{
 \backslash
-pgfxycurve(1.75,1.5)(1.75,1)(0,1.5)(0,1.05)}
+pgfxycurve(2,3.8)(3,3.5)(4,3)(6,2.5)}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2005,9 +2117,9 @@ pgfxycurve(1.75,1.5)(1.75,1)(0,1.5)(0,1.05)}
 
   
 \backslash
-uncover<3->{
+only<7>{
 \backslash
-pgfxycurve(2.65,2.5)(3.75,2.5)(7,1)(7,1.9)}
+pgfxycurve(6,2.4)(5,2.4)(3,2.4)(2,2.4)}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2026,6 +2138,159 @@ end{pgfpicture}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<4,6,8,10>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The 
+\family typewriter
+login
+\family default
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"      
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+   <command>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      <login>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <clID>5731674</clID>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <pw>YoCAHY&amp;4A</pw>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <options>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+            <version>1.0</version>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+            <lang>en</lang>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         </options>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+       <svcs>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+       </svcs>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      </login>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+    <clTRID>ud-reloaded-epp</clTRID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+  </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+</epp>
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Section
 Last Part
 \end_layout
