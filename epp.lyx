@@ -1872,7 +1872,7 @@ login
 
 \end_deeper
 \begin_layout BeginFrame
-EPP Chat
+EPP Dialogue
 \end_layout
 
 \begin_layout Overprint
@@ -1888,7 +1888,7 @@ status open
 
 
 \backslash
-onslide<2,3,5,7,9>
+onslide<2,3,5,7,9,11,13,15>
 \end_layout
 
 \end_inset
@@ -1911,7 +1911,7 @@ begin{pgfpicture}{-0.5cm}{0cm}{8cm}{5cm}
 
 
 \backslash
-only<2,3,5,7,9>{
+only<2,3,5,7,9,11,13,15>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -1962,13 +1962,6 @@ includegraphics{images/network-server.png}}
 
 \begin_layout Plain Layout
 
-
-\backslash
-pgfputat{
-\backslash
-pgfxy(1.75,2.5)}{
-\backslash
-pgfbox[center,center]{hello}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1984,25 +1977,100 @@ pgfbox[center,center]{hello}}
 
 
 \backslash
-only<3>{}
+only<3>{
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-only<5,7,9>{
-\end_layout
-
-\begin_layout Plain Layout
-
-    
+     
 \backslash
 pgfputat{
 \backslash
-pgfxy(0.5,2)}{
+pgfxy(3,4.1)}{
 \backslash
-tape{}{}{}}
+pgfbox[center,center]{
+\backslash
+texttt{<greeting>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%slide 4 show sample greeting
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<5>{
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\backslash
+pgfputat{
+\backslash
+pgfxy(4,3.7)}{
+\backslash
+pgfbox[center,center]{
+\backslash
+texttt{<login>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%slide 6 show sample login
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<7>{
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\backslash
+pgfputat{
+\backslash
+pgfxy(4,2.6)}{
+\backslash
+pgfbox[center,center]{
+\backslash
+texttt{<ok>}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2018,18 +2086,107 @@ tape{}{}{}}
 
 
 \backslash
-only<7,9>{
+only<9,11,13>{
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+     
 \backslash
 pgfputat{
 \backslash
-pgfxy(7,2)}{
+pgfxy(4,2.6)}{
 \backslash
-tape{}{}{}}
+pgfbox[center,center]{
+\backslash
+texttt{<command>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<11>{
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\backslash
+pgfputat{
+\backslash
+pgfxy(4,1.5)}{
+\backslash
+pgfbox[center,center]{
+\backslash
+texttt{<ok>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<13>{
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\backslash
+pgfputat{
+\backslash
+pgfxy(4,1.5)}{
+\backslash
+pgfbox[center,center]{
+\backslash
+texttt{<error>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<15>{
+\end_layout
+
+\begin_layout Plain Layout
+
+     
+\backslash
+pgfputat{
+\backslash
+pgfxy(4,2.6)}{
+\backslash
+pgfbox[center,center]{
+\backslash
+texttt{<logout>}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2072,6 +2229,10 @@ pgfarrowto}
 only<3>{
 \backslash
 pgfxycurve(6,3.9)(5,3.9)(4,3.9)(2,3.9)}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2130,6 +2291,37 @@ pgfxycurve(6,2.4)(5,2.4)(3,2.4)(2,2.4)}
 
 
 \backslash
+only<9,11,13>{
+\backslash
+pgfxycurve(2,2.4)(3,2.4)(5,2.4)(6,2.4)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<11,13>{
+\backslash
+pgfxycurve(6,1.9)(5,1.9)(3,1.9)(2,1.9)}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<15>{
+\backslash
+pgfxycurve(2,2.4)(3,2.4)(5,2.4)(6,2.4)}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 end{pgfpicture}
 \end_layout
 
@@ -2146,7 +2338,7 @@ status open
 
 
 \backslash
-onslide<4,6,8,10>
+onslide<4,6,8,10,12,14,16>
 \end_layout
 
 \end_inset
