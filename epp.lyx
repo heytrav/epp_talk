@@ -168,7 +168,7 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
-\cite_engine basic
+\cite_engine natbib_numerical
 \use_bibtopic false
 \paperorientation portrait
 \secnumdepth 2
@@ -1166,6 +1166,13 @@ status open
 To create a robust and flexible protocol that could provide communication
  between domain name registries and domain name registrars.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiki-epp"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1183,6 +1190,22 @@ status open
 XML - Structured text-based format
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Can be easily extended
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -1281,6 +1304,13 @@ status open
 \end_inset
 
 Objects
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4932,rfc-4931,rfc-4933,rfc-4930"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -2613,6 +2643,8 @@ status open
 
 \begin_deeper
 \begin_layout Quote
+
+\size small
 Number of registries that base their communication on EPP is increasing.
 \end_layout
 
@@ -2652,7 +2684,7 @@ status open
 
 \end_inset
 
-Since 2006
+At UDAG since 2006
 \begin_inset ERT
 status open
 
@@ -2668,14 +2700,20 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
+
+\size small
 eu
 \end_layout
 
 \begin_layout Itemize
+
+\size small
 be
 \end_layout
 
 \begin_layout Itemize
+
+\size small
 at
 \end_layout
 
@@ -2706,7 +2744,7 @@ status open
 
 \end_inset
 
-2009
+Coming in 2009
 \begin_inset ERT
 status open
 
@@ -2732,6 +2770,8 @@ status open
 
 \end_inset
 
+
+\size footnotesize
 ch
 \end_layout
 
@@ -2746,20 +2786,8 @@ status open
 
 \end_inset
 
-uk
-\end_layout
 
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<6->
-\end_layout
-
-\end_inset
-
+\size footnotesize
 se
 \end_layout
 
@@ -2774,6 +2802,24 @@ status open
 
 \end_inset
 
+
+\size footnotesize
+uk
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
 fr
 \end_layout
 
@@ -2788,6 +2834,8 @@ status open
 
 \end_inset
 
+
+\size footnotesize
 nl
 \end_layout
 
@@ -2802,10 +2850,83 @@ status open
 
 \end_inset
 
+
+\size footnotesize
 gTLDs
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<8->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+Other EPP registries
+\lang english
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiki-epp"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+.aero, .mobi, .ag, .au, .br, .bz, .cz, .gi
+\end_layout
+
+\begin_layout Plain Layout
+
+\size footnotesize
+.gr, .hn, .in, .me, .mn, .pl, .ro, .sc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Section*
 Summary
@@ -2857,7 +2978,7 @@ For Further Reading
 
 \begin_layout BeginFrame
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2869,10 +2990,11 @@ status collapsed
 For Further Reading
 \end_layout
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "key-1"
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/Users/holton/workspace/references/RFCs"
+options "bibtotoc,plain"
 
 \end_inset
 
