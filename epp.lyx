@@ -168,7 +168,7 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
-\cite_engine natbib_numerical
+\cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
 \secnumdepth 2
@@ -243,20 +243,10 @@ In principle, this file can be redistributed and/or modified under the terms
 \begin_layout Title
 Extensible Provisioning Protocol (EPP)
 \begin_inset OptArg
-status collapsed
-
-\begin_layout Plain Layout
-Short Paper Title 
-\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-optional, use only with long paper titles
-\end_layout
-
-\end_inset
-
-
+Introduction to EPP 
 \end_layout
 
 \end_inset
@@ -266,7 +256,7 @@ optional, use only with long paper titles
 
 \begin_layout Date
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 - Use the 
@@ -282,10 +272,10 @@ inst command only if there are several affiliations.
 
 
 \begin_inset OptArg
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Universities of Somewhere and Elsewhere
+united-domains AG
 \begin_inset Note Note
 status open
 
@@ -305,7 +295,7 @@ optional, but mostly needed
 
 \begin_layout Date
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 - Either use conference name or its abbreviation.
@@ -1304,13 +1294,6 @@ status open
 \end_inset
 
 Objects
-\begin_inset CommandInset citation
-LatexCommand cite
-key "rfc-4932,rfc-4931,rfc-4933,rfc-4930"
-
-\end_inset
-
-
 \begin_inset ERT
 status open
 
@@ -1336,7 +1319,14 @@ status open
 
 \end_inset
 
-Domain
+Domain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4931"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1350,7 +1340,14 @@ status open
 
 \end_inset
 
-Contact
+Contact 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4932"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1364,7 +1361,14 @@ status open
 
 \end_inset
 
-Host (nameserver)
+Host (nameserver) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4932"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2879,10 +2883,7 @@ status open
 
 \end_inset
 
-
 Other EPP registries
-\lang english
-
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wiki-epp"
@@ -2904,27 +2905,8 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\size footnotesize
-.aero, .mobi, .ag, .au, .br, .bz, .cz, .gi
-\end_layout
-
-\begin_layout Plain Layout
-
-\size footnotesize
-.gr, .hn, .in, .me, .mn, .pl, .ro, .sc
-\end_layout
-
-\end_inset
-
-
+\begin_layout Standard
+.aero, .mobi, .ag, .au, .br, .bz, .cz, .gi, .gr, .hn, .in, .me, .mn, .pl, .ro, .sc
 \end_layout
 
 \end_deeper
@@ -2972,29 +2954,11 @@ All of the following is optional and typically not needed.
 Appendix
 \end_layout
 
-\begin_layout Subsection*
-For Further Reading
-\end_layout
-
-\begin_layout BeginFrame
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[allowframebreaks]
-\end_layout
-
-\end_inset
-
-For Further Reading
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "/Users/holton/workspace/references/RFCs"
-options "bibtotoc,plain"
+bibfiles "references/RFCs"
+options "plain"
 
 \end_inset
 
