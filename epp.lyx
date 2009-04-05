@@ -1752,7 +1752,7 @@ status open
 
 
 \backslash
-onslide<2,3,5,7,9,11,13,15>
+onslide<1,2,4,6,7,12>
 \end_layout
 
 \end_inset
@@ -1766,66 +1766,33 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{pgfpicture}{-0.5cm}{0cm}{8cm}{5cm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-only<2,3,5,7,9,11,13,15>{
+begin{picture}(300,200)
 \end_layout
 
 \begin_layout Plain Layout
 
-   
-\backslash
-pgfputat{
-\backslash
-pgfxy(0.5,4.5)}{
-\backslash
-shorttape{}{}{UDAG}}
 \end_layout
 
 \begin_layout Plain Layout
 
-   %
+
 \backslash
-pgfputat{
-\backslash
-pgfxy(0.5,4)}{
-\backslash
-includegraphics{images/network-server.png}}
+onslide<1,2,4,6,7,12>{
 \end_layout
 
 \begin_layout Plain Layout
 
-   
-\backslash
-pgfputat{
-\backslash
-pgfxy(7,4.5)}{
-\backslash
-tape{}{
-\backslash
-includegraphics{images/network-server.png}}{Registry}}
-\end_layout
 
-\begin_layout Plain Layout
-
-   %
 \backslash
-pgfputat{
+put(150,175){
 \backslash
-pgfxy(7,4)}{
-\backslash
-includegraphics{images/network-server.png}}
-\end_layout
-
-\begin_layout Plain Layout
-
+circle*{5}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1841,100 +1808,50 @@ includegraphics{images/network-server.png}}
 
 
 \backslash
-only<3>{
-\end_layout
-
-\begin_layout Plain Layout
-
-     
-\backslash
-pgfputat{
-\backslash
-pgfxy(3,4.1)}{
-\backslash
-pgfbox[center,center]{
-\backslash
-texttt{<greeting>}}}
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-%slide 4 show sample greeting
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
+onslide<4,6,7,12>{
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-only<5>{
+put(150,173.5){
+\backslash
+vector(0,-1){23.5}}
 \end_layout
 
 \begin_layout Plain Layout
 
-     
+
 \backslash
-pgfputat{
+put(155,160){
 \backslash
-pgfxy(4,3.7)}{
-\backslash
-pgfbox[center,center]{
+makebox{
 \backslash
 texttt{<login>}}}
 \end_layout
 
 \begin_layout Plain Layout
 
-}
-\end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-%slide 6 show sample login
-\end_layout
-
-\begin_layout Plain Layout
-
+\backslash
+put(137,125){
+\backslash
+rotatebox{45}{
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-only<7>{
+framebox(15,15){
 \end_layout
 
 \begin_layout Plain Layout
 
-     
+
 \backslash
-pgfputat{
-\backslash
-pgfxy(4,2.6)}{
-\backslash
-pgfbox[center,center]{
-\backslash
-texttt{<ok>}}}
+rotatebox{-45}{ok?}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1944,26 +1861,7 @@ texttt{<ok>}}}
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<9,11,13>{
-\end_layout
-
-\begin_layout Plain Layout
-
-     
-\backslash
-pgfputat{
-\backslash
-pgfxy(4,2.6)}{
-\backslash
-pgfbox[center,center]{
-\backslash
-texttt{<command>}}}
+}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1979,20 +1877,112 @@ texttt{<command>}}}
 
 
 \backslash
-only<11>{
+onslide<6,7,12>{
 \end_layout
 
 \begin_layout Plain Layout
 
-     
+
 \backslash
-pgfputat{
+put(150,126){
 \backslash
-pgfxy(4,1.5)}{
+vector(0,-1){20}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-pgfbox[center,center]{
+put(115,95){
 \backslash
-texttt{<ok>}}}
+framebox{command phase}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(60,95){
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+parbox{20mm}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tiny
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+info domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+create domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+create contact
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+update domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+transfer domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\backslash
+vdots
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2008,20 +1998,70 @@ texttt{<ok>}}}
 
 
 \backslash
-only<13>{
+onslide<7,12>{
 \end_layout
 
 \begin_layout Plain Layout
 
-     
+
 \backslash
-pgfputat{
+put(150,90){
 \backslash
-pgfxy(4,1.5)}{
+line(0,-1){10}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-pgfbox[center,center]{
+put(154.88,80){
 \backslash
-texttt{<error>}}}
+oval(10,10)[bl]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(155,75){
+\backslash
+line(1,0){50}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(204.875,80){
+\backslash
+oval(10,10)[br]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(210,80){
+\backslash
+line(0,1){15}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(204.875,95){
+\backslash
+oval(10,10)[tr]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(205,100){
+\backslash
+vector(-1,0){10}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2037,24 +2077,40 @@ texttt{<error>}}}
 
 
 \backslash
-only<15>{
+onslide<12>{
 \end_layout
 
 \begin_layout Plain Layout
 
-     
+
 \backslash
-pgfputat{
+put(155,55){
 \backslash
-pgfxy(4,2.6)}{
-\backslash
-pgfbox[center,center]{
+makebox{
 \backslash
 texttt{<logout>}}}
 \end_layout
 
 \begin_layout Plain Layout
 
+
+\backslash
+put(150,90){
+\backslash
+vector(0,-1){40}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,45){
+\backslash
+circle*{5}}
+\end_layout
+
+\begin_layout Plain Layout
+
 }
 \end_layout
 
@@ -2064,129 +2120,32 @@ texttt{<logout>}}}
 
 \begin_layout Plain Layout
 
-
-\backslash
-color{structure}
 \end_layout
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-pgfsetendarrow{
-\backslash
-pgfarrowto}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-only<3>{
-\backslash
-pgfxycurve(6,3.9)(5,3.9)(4,3.9)(2,3.9)}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-   %
-\backslash
-put(30,10){
-\backslash
-vector(-1,0){20}}
 \end_layout
 
 \begin_layout Plain Layout
 
 %
 \backslash
-only<3>{
+put(100,100){
 \backslash
-pgfxycurve(0.5,3.9)()()()}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
+begin{picture}(50,50)
 \backslash
-only<5>{
+put(20,20){
 \backslash
-pgfxycurve(2,3.8)(3,3.5)(4,3)(6,2.5)}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
+line(2,3){15}}
 \backslash
-only<7>{
-\backslash
-pgfxycurve(6,2.4)(5,2.4)(3,2.4)(2,2.4)}
-\end_layout
-
-\begin_layout Plain Layout
-
+end{picture}}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-only<9,11,13>{
-\backslash
-pgfxycurve(2,2.4)(3,2.4)(5,2.4)(6,2.4)}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<11,13>{
-\backslash
-pgfxycurve(6,1.9)(5,1.9)(3,1.9)(2,1.9)}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<15>{
-\backslash
-pgfxycurve(2,2.4)(3,2.4)(5,2.4)(6,2.4)}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{pgfpicture}
+end{picture}
 \end_layout
 
 \end_inset
@@ -2202,7 +2161,7 @@ status open
 
 
 \backslash
-onslide<4,6,8>
+onslide<3,5>
 \end_layout
 
 \end_inset
@@ -2252,79 +2211,95 @@ login
 \begin_layout LyX-Code
 
 \size scriptsize
-      <login>       
+      
+\color blue
+<login>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          <clID>5731674</clID>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          <pw>YoCAHY&amp;4A</pw>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          <options>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
             <version>1.0</version>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
             <lang>en</lang>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          </options>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
        <svcs>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
            <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
            <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
            <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
        </svcs>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
-      </login>     
+\color blue
+      </login>  
+\color inherit
+   
 \end_layout
 
 \begin_layout LyX-Code
@@ -2358,7 +2333,7 @@ status open
 
 
 \backslash
-onslide<10,12,14>
+onslide<8,9,10,11>
 \end_layout
 
 \end_inset
@@ -2416,49 +2391,64 @@ info contact
 \begin_layout LyX-Code
 
 \size footnotesize
-   <command>     
+   <command>
+\color blue
+     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
+\color blue
        <info>      
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
+\color blue
           <contact:info>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
+\color blue
              <contact:id>6051296</contact:id>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
+\color blue
           </contact:info>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
+\color blue
       </info>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
-      <clTRID>123746901055</clTRID>   
+\color blue
+      
+\color inherit
+<clTRID>123746901055</clTRID>
+\color blue
+   
 \end_layout
 
 \begin_layout LyX-Code
 
 \size footnotesize
-  </command> 
+\color blue
+  
+\color inherit
+</command> 
 \end_layout
 
 \begin_layout LyX-Code
@@ -2478,7 +2468,7 @@ status open
 
 
 \backslash
-onslide<16>
+onslide<13>
 \end_layout
 
 \end_inset
@@ -2536,7 +2526,11 @@ logout
 \begin_layout LyX-Code
 
 \size footnotesize
-     <logout />     
+    
+\color blue
+ <logout /> 
+\color inherit
+    
 \end_layout
 
 \begin_layout LyX-Code
