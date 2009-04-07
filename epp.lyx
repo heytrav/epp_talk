@@ -11,6 +11,142 @@
 % or whatever (possibly just delete it)
 
 \usepackage{pgfnodes,pgfarrows,pgfheaps}
+
+
+\pgfdeclareimage[width=0.6cm]{icsi-logo}{beamer-icsi-logo}
+\logo{\pgfuseimage{icsi-logo}}
+
+
+
+
+\newcommand{\Class}[1]{\operatorname{\mathchoice
+  {\text{\small #1}}
+  {\text{\small #1}}
+  {\text{#1}}
+  {\text{#1}}}}
+
+\newcommand{\Lang}[1]{\operatorname{\text{\textsc{#1}}}}
+
+\newcommand{\tape}[3]{%
+  \color{structure!30!bg}
+  \pgfmoveto{\pgfxy(-0.5,0)}
+  \pgflineto{\pgfxy(-0.6,0.1)}
+  \pgflineto{\pgfxy(-0.4,0.2)}
+  \pgflineto{\pgfxy(-0.6,0.3)}
+  \pgflineto{\pgfxy(-0.4,0.4)}
+  \pgflineto{\pgfxy(-0.5,0.5)}
+  \pgflineto{\pgfxy(4,0.5)}
+  \pgflineto{\pgfxy(4.1,0.4)}
+  \pgflineto{\pgfxy(3.9,0.3)}
+  \pgflineto{\pgfxy(4.1,0.2)}
+  \pgflineto{\pgfxy(3.9,0.1)}
+  \pgflineto{\pgfxy(4,0)}
+  \pgfclosepath
+  \pgffill
+
+  \color{structure}  
+  \pgfputat{\pgfxy(0,0.7)}{\pgfbox[left,base]{#1}}
+  \pgfputat{\pgfxy(0,-0.1)}{\pgfbox[left,top]{#2}}
+
+  \color{black}
+  \pgfputat{\pgfxy(-.1,0.25)}{\pgfbox[left,center]{\texttt{#3}}}%
+}
+
+\newcommand{\shorttape}[3]{%
+  \color{structure!30!bg}
+  \pgfmoveto{\pgfxy(-0.5,0)}
+  \pgflineto{\pgfxy(-0.6,0.1)}
+  \pgflineto{\pgfxy(-0.4,0.2)}
+  \pgflineto{\pgfxy(-0.6,0.3)}
+  \pgflineto{\pgfxy(-0.4,0.4)}
+  \pgflineto{\pgfxy(-0.5,0.5)}
+  \pgflineto{\pgfxy(1,0.5)}
+  \pgflineto{\pgfxy(1.1,0.4)}
+  \pgflineto{\pgfxy(0.9,0.3)}
+  \pgflineto{\pgfxy(1.1,0.2)}
+  \pgflineto{\pgfxy(0.9,0.1)}
+  \pgflineto{\pgfxy(1,0)}
+  \pgfclosepath
+  \pgffill
+
+  \color{structure}  
+  \pgfputat{\pgfxy(0.25,0.7)}{\pgfbox[center,base]{#1}}
+  \pgfputat{\pgfxy(0.25,-0.1)}{\pgfbox[center,top]{#2}}
+
+  \color{black}
+  \pgfputat{\pgfxy(-.1,0.25)}{\pgfbox[left,center]{\texttt{#3}}}%
+}
+
+\pgfdeclareverticalshading{heap1}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!65!white)}
+\pgfdeclareverticalshading{heap2}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!55!white)}
+\pgfdeclareverticalshading{heap3}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!45!white)}
+\pgfdeclareverticalshading{heap4}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!35!white)}
+\pgfdeclareverticalshading{heap5}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(structure!25!white)}
+\pgfdeclareverticalshading{heap6}{\the\paperwidth}%
+  {color(0pt)=(black); color(1cm)=(red!35!white)}
+
+\newcommand{\heap}[5]{%
+  \begin{pgfscope}
+    \color{#4}
+    \pgfheappath{\pgfxy(0,#1)}{\pgfxy(-#2,0)}{\pgfxy(#2,0)}
+    \pgfclip
+    \begin{pgfmagnify}{1}{#1}
+      \pgfputat{\pgfpoint{-.5\paperwidth}{0pt}}{\pgfbox[left,base]{\pgfuseshading{heap#5}}}
+    \end{pgfmagnify}
+  \end{pgfscope}
+  %\pgffill
+  
+  \color{#4}
+  \pgfheappath{\pgfxy(0,#1)}{\pgfxy(-#2,0)}{\pgfxy(#2,0)}
+  \pgfstroke
+
+  \color{white}
+  \pgfheaplabel{\pgfxy(0,#1)}{#3}%
+}
+
+
+\newcommand{\langat}[2]{%
+  \color{black!30!beamerexample}
+  \pgfsetlinewidth{0.6pt}
+  \pgfsetendarrow{\pgfarrowdot}
+  \pgfline{\pgfxy(-3.5,#1)}{\pgfxy(0.05,#1)}
+  \color{beamerexample}
+  \pgfputat{\pgfxy(-3.6,#1)}{\pgfbox[right,center]{#2}}%
+}
+
+\newcommand{\langatother}[2]{%
+  \color{black!30!beamerexample}
+  \pgfsetlinewidth{0.6pt}
+  \pgfsetendarrow{\pgfarrowdot}
+  \pgfline{\pgfxy(3.5,#1)}{\pgfxy(-0.05,#1)}
+  \color{beamerexample}
+  \pgfputat{\pgfxy(3.6,#1)}{\pgfbox[left,center]{#2}}%
+}
+
+
+%\pgfdeclaremask{knight1-mask}{beamer-knight1-mask} \pgfdeclareimage[height=2cm,mask=knight1-mask]{knight1}{beamer-knight1} \pgfdeclaremask{knight2-mask}{beamer-knight2-mask} \pgfdeclareimage[height=2cm,mask=knight2-mask]{knight2}{beamer-knight2} \pgfdeclaremask{knight3-mask}{beamer-knight3-mask} \pgfdeclareimage[height=2cm,mask=knight3-mask,interpolate=true]{knight3}{beamer-knight3} \pgfdeclaremask{knight4-mask}{beamer-knight4-mask} \pgfdeclareimage[height=2cm,mask=knight4-mask,interpolate=true]{knight4}{beamer-knight4}
+
+
+\pgfdeclareradialshading{graphnode}
+  {\pgfpoint{-3pt}{3.6pt}}%
+  {color(0cm)=(beamerexample!15);
+    color(2.63pt)=(beamerexample!75);
+    color(5.26pt)=(beamerexample!70!black);
+    color(7.6pt)=(beamerexample!50!black);
+    color(8pt)=(beamerexample!10!bg)}
+
+\newcommand{\graphnode}[2]{
+  \pgfnodecircle{#1}[virtual]{#2}{8pt}
+  \pgfputat{#2}{\pgfbox[center,center]{\pgfuseshading{graphnode}}}
+}
+
+
+\pgfdeclareimage[height=0.5cm]{net-server}{/Users/holton/workspace/lyx_projects/epp_talk/images/network-server.png}
 \end_preamble
 \use_default_options false
 \language english
@@ -107,20 +243,10 @@ In principle, this file can be redistributed and/or modified under the terms
 \begin_layout Title
 Extensible Provisioning Protocol (EPP)
 \begin_inset OptArg
-status collapsed
-
-\begin_layout Plain Layout
-Short Paper Title 
-\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-optional, use only with long paper titles
-\end_layout
-
-\end_inset
-
-
+Introduction to EPP 
 \end_layout
 
 \end_inset
@@ -130,7 +256,7 @@ optional, use only with long paper titles
 
 \begin_layout Date
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 - Use the 
@@ -146,10 +272,10 @@ inst command only if there are several affiliations.
 
 
 \begin_inset OptArg
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Universities of Somewhere and Elsewhere
+united-domains AG
 \begin_inset Note Note
 status open
 
@@ -169,7 +295,7 @@ optional, but mostly needed
 
 \begin_layout Date
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 - Either use conference name or its abbreviation.
@@ -1030,6 +1156,13 @@ status open
 To create a robust and flexible protocol that could provide communication
  between domain name registries and domain name registrars.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiki-epp"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1047,6 +1180,22 @@ status open
 XML - Structured text-based format
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+Can be easily extended
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -1170,7 +1319,14 @@ status open
 
 \end_inset
 
-Domain
+Domain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4931"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1184,7 +1340,14 @@ status open
 
 \end_inset
 
-Contact
+Contact 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4932"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1198,7 +1361,14 @@ status open
 
 \end_inset
 
-Host (nameserver)
+Host (nameserver) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc-4932"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1404,12 +1574,12 @@ The Boring Part
 \end_layout
 
 \begin_layout Subsection
-The Gritty Details
+XML
 \begin_inset OptArg
 status open
 
 \begin_layout Plain Layout
-EPP: Technical Mumbo Jumbo
+EPP serialization
 \end_layout
 
 \end_inset
@@ -1595,8 +1765,442 @@ Looks scary
 
 \end_deeper
 \end_deeper
+\begin_layout Subsection
+Client-Registry EPP Communication
+\end_layout
+
 \begin_layout BeginFrame
-Talking the Talk
+EPP Dialogue
+\end_layout
+
+\begin_layout Overprint
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<1,2,4,6,7,12>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{picture}(300,200)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<1,2,4,6,7,12>{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,175){
+\backslash
+circle*{5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<4,6,7,12>{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,173.5){
+\backslash
+vector(0,-1){23.5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(155,160){
+\backslash
+makebox{
+\backslash
+texttt{<login>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(137,125){
+\backslash
+rotatebox{45}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+framebox(15,15){
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rotatebox{-45}{ok?}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<6,7,12>{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,126){
+\backslash
+vector(0,-1){20}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(115,95){
+\backslash
+framebox{command phase}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(60,95){
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+parbox{20mm}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tiny
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+texttt{%
+\end_layout
+
+\begin_layout Plain Layout
+
+info domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+create domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+create contact
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+update domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+transfer domain
+\backslash
+linebreak
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\backslash
+vdots
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<7,12>{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,90){
+\backslash
+line(0,-1){10}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(154.88,80){
+\backslash
+oval(10,10)[bl]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(155,75){
+\backslash
+line(1,0){50}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(204.875,80){
+\backslash
+oval(10,10)[br]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(210,80){
+\backslash
+line(0,1){15}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(204.875,95){
+\backslash
+oval(10,10)[tr]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(205,100){
+\backslash
+vector(-1,0){10}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<12>{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(155,55){
+\backslash
+makebox{
+\backslash
+texttt{<logout>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,90){
+\backslash
+vector(0,-1){40}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(150,45){
+\backslash
+circle*{5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+put(100,100){
+\backslash
+begin{picture}(50,50)
+\backslash
+put(20,20){
+\backslash
+line(2,3){15}}
+\backslash
+end{picture}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{picture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<3,5>
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -1641,79 +2245,95 @@ login
 \begin_layout LyX-Code
 
 \size scriptsize
-      <login>       
+      
+\color blue
+<login>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          <clID>5731674</clID>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          <pw>YoCAHY&amp;4A</pw>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          <options>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
             <version>1.0</version>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
             <lang>en</lang>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
          </options>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
        <svcs>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
            <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
            <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
            <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
+\color blue
        </svcs>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
-      </login>     
+\color blue
+      </login>  
+\color inherit
+   
 \end_layout
 
 \begin_layout LyX-Code
@@ -1732,13 +2352,11 @@ login
 
 \size scriptsize
 </epp>
-\size default
- 
 \end_layout
 
 \end_deeper
-\begin_layout BeginFrame
-EPP Chat
+\begin_layout Example
+
 \end_layout
 
 \begin_layout Standard
@@ -1749,145 +2367,7 @@ status open
 
 
 \backslash
-begin{pgfpicture}{-0.5cm}{0cm}{8cm}{5cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-pgfputat{
-\backslash
-pgfxy(0,4)}{Client}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-   
-\backslash
-uncover<2->{
-\backslash
-pgfputat{
-\backslash
-pgfxy(6,4)}{Server}}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-uncover<3->{
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-pgfputat{
-\backslash
-pgfxy(7,2)}{login}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-pgfputat{
-\backslash
-pgfxy(1.75,2.5)}{Reply}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-color{structure}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-pgfsetendarrow{
-\backslash
-pgfarrowto}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-pgfxycurve(1.75,3.5)(1.75,3.75)(0,3.5)(0,3.85)
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-uncover<2->{
-\backslash
-pgfxycurve(1.75,1.5)(1.75,1)(0,1.5)(0,1.05)}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-uncover<3->{
-\backslash
-pgfxycurve(2.65,2.5)(3.75,2.5)(7,1)(7,1.9)}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{pgfpicture}
+onslide<8,9,10,11>
 \end_layout
 
 \end_inset
@@ -1895,6 +2375,218 @@ end{pgfpicture}
 
 \end_layout
 
+\begin_layout Example
+The 
+\family typewriter
+\size small
+info contact
+\family default
+\size default
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"             
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      xmlns:contact="urn:ietf:params:xml:ns:contact-1.0"
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+      epp-1.0.xsd urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+   <command>
+\color blue
+     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+       <info>      
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+          <contact:info>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+             <contact:id>6051296</contact:id>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+          </contact:info>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+      </info>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+      
+\color inherit
+<clTRID>123746901055</clTRID>
+\color blue
+   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+  
+\color inherit
+</command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+</epp>
+\size default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<13>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The 
+\family typewriter
+\size small
+logout
+\family default
+\size default
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+         xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+         epp-1.0.xsd">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  <command>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+    
+\color blue
+ <logout /> 
+\color inherit
+    
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  <clTRID>ud-reloaded-epp</clTRID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+  </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+</epp> 
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Section
 Last Part
 \end_layout
@@ -1955,8 +2647,9 @@ status open
 
 \begin_deeper
 \begin_layout Quote
+
+\size small
 Number of registries that base their communication on EPP is increasing.
- Therefore, usage at united-domains AG will also increase.
 \end_layout
 
 \end_deeper
@@ -1995,7 +2688,7 @@ status open
 
 \end_inset
 
-Since 2006
+At UDAG since 2006
 \begin_inset ERT
 status open
 
@@ -2011,14 +2704,20 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
+
+\size small
 eu
 \end_layout
 
 \begin_layout Itemize
+
+\size small
 be
 \end_layout
 
 \begin_layout Itemize
+
+\size small
 at
 \end_layout
 
@@ -2049,7 +2748,7 @@ status open
 
 \end_inset
 
-2009
+Coming in 2009
 \begin_inset ERT
 status open
 
@@ -2065,149 +2764,152 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
 ch
 \end_layout
 
 \begin_layout Itemize
-uk
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
 \end_layout
 
-\begin_layout Itemize
+\end_inset
+
+
+\size footnotesize
 se
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
+uk
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
 fr
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
 nl
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<7->
+\end_layout
+
+\end_inset
+
+
+\size footnotesize
 gTLDs
 \end_layout
 
 \end_deeper
 \end_deeper
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Example
+\begin_layout Block
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-<1->
+<8->
 \end_layout
 
 \end_inset
 
-On first slide.
- 
-\end_layout
 
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Example
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
-<2->
+{
 \end_layout
 
 \end_inset
 
-On second slide.
+Other EPP registries
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wiki-epp"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
-\begin_layout Section
-Our Results/Contribution
-\end_layout
+\end_inset
 
-\begin_layout Subsection
-Main Results
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Theorem
-On first slide.
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Corollary
-On second slide.
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout ColumnsTopAligned
 
 \end_layout
 
 \begin_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Theorem
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-In left column.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
+\begin_layout Standard
+.aero, .mobi, .ag, .au, .br, .bz, .cz, .gi, .gr, .hn, .in, .me, .mn, .pl, .ro, .sc
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Basic Ideas for Proofs/Implementations
-\end_layout
-
 \begin_layout Section*
 Summary
 \end_layout
@@ -2217,78 +2919,23 @@ Summary
 \end_layout
 
 \begin_layout Itemize
-The
+
 \color none
- 
-\color red
-first main message
-\color none
- of your talk in one or two lines.
+Few standard domain registration protocols
 \end_layout
 
 \begin_layout Itemize
-The
+
 \color none
- 
-\color red
-second main message
-\color none
- of your talk in one or two lines.
+EPP is promising effort to improve situation.
 \end_layout
 
 \begin_layout Itemize
-Perhaps a
+
 \color none
- 
-\color red
-third message
-\color none
-, but not more than that.
+Several major registries switching to EPP
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-An outlook is always optional.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-vskip0pt plus.5fill
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Outlook
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-What we have not done yet.
-\end_layout
-
-\begin_layout Itemize
-Even more stuff.
-\end_layout
-
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -2307,162 +2954,15 @@ All of the following is optional and typically not needed.
 Appendix
 \end_layout
 
-\begin_layout Subsection*
-For Further Reading
-\end_layout
-
-\begin_layout BeginFrame
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-[allowframebreaks]
-\end_layout
-
-\end_inset
-
-For Further Reading
-\end_layout
-
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatebookbibitems
-\end_layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references/RFCs"
+options "plain"
 
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Start with overview books.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Author1990"
-
-\end_inset
-
-A.
- Author.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Handbook of Everything
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Some Press, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Followed by interesting articles.
- Keep the list short.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Someone2002"
-
-\end_inset
-
-S.
- Someone.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- On this and that
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Journal on This and That
-\emph default
-.
- 2(1):50--100, 2000.
 \end_layout
 
 \begin_layout EndFrame
