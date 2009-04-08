@@ -1852,7 +1852,7 @@ circle*{5}}
 
 
 \backslash
-onslide<4,6,7,12>{
+onslide<2,4,6,7,12>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -2205,7 +2205,7 @@ status open
 
 
 \backslash
-onslide<3,5>
+onslide<3>
 \end_layout
 
 \end_inset
@@ -2377,7 +2377,122 @@ status open
 
 
 \backslash
-onslide<8,9,10,11>
+onslide<5>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Standard ok response
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+           xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+   <response>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     
+\color green
+ <result code="1000">       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color green
+          <msg>Command completed successfully</msg>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color green
+      </result>
+\color inherit
+     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      <trID> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <clTRID>ud-reloaded-epp</clTRID>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <svTRID>200904081636006197270D-#-nicat</svTRID>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     </trID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+   </response> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+</epp>
+\size default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<8,10,11>
 \end_layout
 
 \end_inset
@@ -2498,6 +2613,199 @@ info contact
 \begin_layout LyX-Code
 
 \size footnotesize
+</epp>
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<9>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+create contact
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">  
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     <command>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+         <create>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+            <contact:create>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                  <contact:id>auto</contact:id>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                  <contact:postalInfo type="int">           
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                     <contact:name>John DOE</contact:name>           
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                     <contact:org>Whatever-U-Want</contact:org>        
+   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                      <contact:addr>             
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                          <contact:street>Gautingerstr</contact:street>
+             
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+      
+\size default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+ 
+\size scriptsize
+           
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                          <contact:cc>DE</contact:cc>           
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                      </contact:addr>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+                  </contact:postalInfo>  
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+     </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
 </epp>
 \size default
  
