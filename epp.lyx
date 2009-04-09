@@ -1436,6 +1436,15 @@ admin
 No Standard Data format
 \end_layout
 
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+5cm
+\end_layout
+
 \begin_layout Block
 \begin_inset ERT
 status open
@@ -1475,43 +1484,43 @@ status open
 \begin_deeper
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 command=createDomain
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 domain=something.com
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 ownercontact0=P-WHO1
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 admincontact0=P-WHY2
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 techcontact0=P-ABCD
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 nameserver0=ns1-host1.lyceu.net
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 nameserver1=ns2-host1.lyceu.net
 \end_layout
 
@@ -1533,13 +1542,13 @@ vdots
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 x-name-mailforward=whoever@wherever.com
 \end_layout
 
 \end_deeper
-\begin_layout LyX-Code
-
+\begin_layout Column
+5cm
 \end_layout
 
 \begin_layout Block
@@ -1581,35 +1590,37 @@ status open
 \begin_deeper
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Action:       CREATE
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Version:      2.0
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Domain:       something.de
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Holder:       DENIC-228-ABCDEFG
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Admin-C:      DENIC-228-1234567
 \end_layout
 
 \begin_layout LyX-Code
+
+\size tiny
 \begin_inset ERT
 status open
 
@@ -1627,20 +1638,17 @@ vdots
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Nserver:      ns1.provider.de
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 Nserver:      ns2.provider.de
 \end_layout
 
-\begin_layout LyX-Code
-
-\end_layout
-
+\end_deeper
 \end_deeper
 \begin_layout Section
 Finding a Uniform Protocol
