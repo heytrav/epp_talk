@@ -646,6 +646,10 @@ Socket-based
 No Standard Data Format 
 \end_layout
 
+\begin_layout FrameSubtitle
+for what we send or what we get back
+\end_layout
+
 \begin_layout Overprint
 
 \end_layout
@@ -785,10 +789,9 @@ Infos concernant l'organisation / le demandeur
 
 \begin_layout LyX-Code
 
+                  
 \size tiny
-\begin_inset space \hfill{}
-\end_inset
-
+\lang english
 
 \begin_inset ERT
 status open
@@ -800,10 +803,6 @@ status open
 vdots
 \end_layout
 
-\end_inset
-
-
-\begin_inset space \hfill{}
 \end_inset
 
 
@@ -818,10 +817,9 @@ vdots
 
 \begin_layout LyX-Code
 
+                  
 \size tiny
-\begin_inset space \hfill{}
-\end_inset
-
+\lang english
 
 \begin_inset ERT
 status open
@@ -833,10 +831,6 @@ status open
 vdots
 \end_layout
 
-\end_inset
-
-
-\begin_inset space \hfill{}
 \end_inset
 
 
@@ -930,6 +924,7 @@ dns1:ns2.udagdns.net
 \begin_layout LyX-Code
 
 \size tiny
+             
 \begin_inset ERT
 status open
 
@@ -1138,6 +1133,7 @@ for the domain name
 \end_layout
 
 \begin_layout LyX-Code
+           
 \begin_inset ERT
 status open
 
@@ -1214,7 +1210,7 @@ No Standard Semantics
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1320,7 +1316,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Who does the domain belong to?
+Different names for owner
 \end_layout
 
 \end_inset
@@ -1432,17 +1428,26 @@ admin
 
 \end_layout
 
+\begin_layout Section
+A Uniform Protocol
+\end_layout
+
+\begin_layout Subsection
+Registry Registrar Protocol
+\begin_inset OptArg
+status open
+
+\begin_layout Plain Layout
+RRP: First attempt at a standard protocol
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginFrame
-No Standard Data format
-\end_layout
-
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-5cm
+Registry Registrar Protocol (RRP)
 \end_layout
 
 \begin_layout Block
@@ -1467,7 +1472,7 @@ status open
 
 \end_inset
 
-RRP (Key-Systems)
+
 \begin_inset ERT
 status open
 
@@ -1482,76 +1487,15 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout LyX-Code
-
-\size tiny
-command=createDomain
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-domain=something.com
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-ownercontact0=P-WHO1
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-admincontact0=P-WHY2
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-techcontact0=P-ABCD
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-nameserver0=ns1-host1.lyceu.net
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-nameserver1=ns2-host1.lyceu.net
-\end_layout
-
-\begin_layout LyX-Code
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vdots
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-x-name-mailforward=whoever@wherever.com
+\begin_layout Quote
+Developed by Network Solutions in 1998 and 1999 to allow multiple registrars
+ to provide second level Internet domain name registration services.
+ In 2003 VeriSign updated the RRP specification with its publication of
+ the Internet Draft entitled "VeriSign RRP v2.0.0".
 \end_layout
 
 \end_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Block
+\begin_layout AlertBlock
 \begin_inset ERT
 status open
 
@@ -1573,7 +1517,7 @@ status open
 
 \end_inset
 
-RRI (DENIC)
+Disadvantages
 \begin_inset ERT
 status open
 
@@ -1588,72 +1532,63 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout LyX-Code
-
-\size tiny
-Action:       CREATE
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-Version:      2.0
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-Domain:       something.de
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-Holder:       DENIC-228-ABCDEFG
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
-Admin-C:      DENIC-228-1234567
-\end_layout
-
-\begin_layout LyX-Code
-
-\size tiny
+\begin_layout Itemize
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-vdots
+<3->
 \end_layout
 
 \end_inset
 
-
+Only supports thin registry data (no contact information)
 \end_layout
 
-\begin_layout LyX-Code
+\begin_layout Itemize
+\begin_inset ERT
+status open
 
-\size tiny
-Nserver:      ns1.provider.de
+\begin_layout Plain Layout
+
+<4->
 \end_layout
 
-\begin_layout LyX-Code
+\end_inset
 
-\size tiny
-Nserver:      ns2.provider.de
+Limited functionality
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+Limited transfer-lock capability
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+Too much propietary control (VeriSign)
 \end_layout
 
 \end_deeper
-\end_deeper
-\begin_layout Section
-Finding a Uniform Protocol
-\end_layout
-
 \begin_layout Subsection
 Introducing EPP
 \end_layout
@@ -1724,25 +1659,10 @@ status open
 
 \end_inset
 
-XML - Structured text-based format
+Flexible network transport
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-Can be easily extended
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -1754,10 +1674,9 @@ status open
 
 \end_inset
 
-Flexible network transport
+TCP sockets
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -1765,20 +1684,6 @@ status open
 \begin_layout Plain Layout
 
 <4->
-\end_layout
-
-\end_inset
-
-TCP Sockets
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<5->
 \end_layout
 
 \end_inset
@@ -1792,12 +1697,70 @@ status open
 
 \begin_layout Plain Layout
 
-<6->
+<5->
 \end_layout
 
 \end_inset
 
 SMTP
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+XML - Structured text-based format
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<7->
+\end_layout
+
+\end_inset
+
+More structured information than with RRP
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<8->
+\end_layout
+
+\end_inset
+
+Fine tuned locks for accidental deletion and transfer
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<9->
+\end_layout
+
+\end_inset
+
+Can be easily extended
 \end_layout
 
 \end_deeper
@@ -2253,7 +2216,7 @@ Computer parseable
 \end_layout
 
 \begin_layout Itemize
-Human Readable
+Human Readable (well, kind of)
 \end_layout
 
 \begin_layout Itemize
@@ -2303,7 +2266,7 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
-Very wordy (bandwidth & storage issues)
+Very wordy (bandwidth , speed & storage issues)
 \end_layout
 
 \begin_layout Itemize
@@ -2761,37 +2724,37 @@ login
 \begin_deeper
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 <?xml version="1.0" encoding="UTF-8"?> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"      
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
      xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">   
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
    <command>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
       
 \color blue
 <login>       
@@ -2799,84 +2762,84 @@ login
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
          <clID>5731674</clID>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
          <pw>YoCAHY&amp;4A</pw>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
          <options>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
             <version>1.0</version>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
             <lang>en</lang>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
          </options>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
        <svcs>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
            <objURI>urn:ietf:params:xml:ns:domain-1.0</objURI>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
            <objURI>urn:ietf:params:xml:ns:contact-1.0</objURI>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
            <objURI>urn:ietf:params:xml:ns:host-1.0</objURI>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
        </svcs>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color blue
       </login>  
 \color inherit
@@ -2885,19 +2848,19 @@ login
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
     <clTRID>ud-reloaded-epp</clTRID>   
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
   </command> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 </epp>
 \end_layout
 
@@ -2929,38 +2892,38 @@ Standard ok response
 \begin_deeper
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
            xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
    
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
    <response>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
      
 \color green
  <result code="1000">       
@@ -2968,14 +2931,14 @@ Standard ok response
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color green
           <msg>Command completed successfully</msg>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 \color green
       </result>
 \color inherit
@@ -2984,40 +2947,38 @@ Standard ok response
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
       <trID> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
          <clTRID>ud-reloaded-epp</clTRID>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
          <svTRID>200904081636006197270D-#-nicat</svTRID>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
      </trID>   
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
    </response> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
-</epp>
-\size default
- 
+\size tiny
+</epp> 
 \end_layout
 
 \end_deeper
@@ -3050,43 +3011,43 @@ info contact
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 <?xml version="1.0" encoding="UTF-8"?> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"             
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
       xmlns:contact="urn:ietf:params:xml:ns:contact-1.0"
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
       xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
       epp-1.0.xsd urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">   
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
    <command>
 \color blue
      
@@ -3094,42 +3055,42 @@ info contact
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
        <info>      
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
           <contact:info>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
              <contact:id>6051296</contact:id>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
           </contact:info>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
       </info>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
       
 \color inherit
@@ -3140,7 +3101,7 @@ info contact
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color blue
   
 \color inherit
@@ -3149,7 +3110,7 @@ info contact
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 </epp>
 \end_layout
 
@@ -3177,103 +3138,89 @@ create contact
 \begin_deeper
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 <?xml version="1.0" encoding="UTF-8"?> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
 \end_layout
 
 \begin_layout LyX-Code
-\begin_inset space \hfill{}
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vdots
+   
+\size tiny
+ urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">  
 \end_layout
 
-\end_inset
+\begin_layout LyX-Code
 
-
-\begin_inset space \hfill{}
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
-
+\size tiny
+     <command>   
+\size scriptsize
+  
 \end_layout
 
 \begin_layout LyX-Code
 
 \size scriptsize
-      urn:ietf:params:xml:ns:contact-1.0 contact-1.0.xsd">  
+        
+\size tiny
+\color blue
+<create>       
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
-     <command>     
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-         <create>       
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
+\size tiny
+\color blue
             <contact:create>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                   <contact:id>auto</contact:id>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                   <contact:postalInfo type="int">           
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                      <contact:name>John DOE</contact:name>           
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                      <contact:org>Whatever-U-Want</contact:org>        
    
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                       <contact:addr>             
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                           <contact:street>Gautingerstr</contact:street>
+\size scriptsize
+\color inherit
              
 \end_layout
 
@@ -3282,7 +3229,7 @@ vdots
 \size scriptsize
       
 \size default
-
+              
 \begin_inset ERT
 status open
 
@@ -3303,49 +3250,48 @@ vdots
 \begin_layout LyX-Code
 
 \size scriptsize
-                          <contact:cc>DE</contact:cc>           
+                       
+\size tiny
+\color blue
+   <contact:cc>DE</contact:cc>           
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
+\size tiny
+\color blue
                       </contact:addr>         
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
-                  </contact:postalInfo>  
+\size tiny
+\color blue
+                  </contact:postalInfo>
 \end_layout
 
 \begin_layout LyX-Code
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-vdots
+\size scriptsize
+         
+\size tiny
+\color blue
+</contact:create>
 \end_layout
 
-\end_inset
+\begin_layout LyX-Code
 
+\size tiny
+\color blue
  
+\color inherit
+    </command> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size scriptsize
-     </command> 
-\end_layout
-
-\begin_layout LyX-Code
-
-\size scriptsize
-</epp>
-\size default
- 
+\size tiny
+</epp> 
 \end_layout
 
 \end_deeper
@@ -3378,43 +3324,43 @@ logout
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 <?xml version="1.0" encoding="UTF-8"?> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0" 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
          xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
          epp-1.0.xsd">   
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
   <command>     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
     
 \color blue
  <logout /> 
@@ -3424,19 +3370,19 @@ logout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
   <clTRID>ud-reloaded-epp</clTRID>   
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
   </command> 
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 </epp> 
 \end_layout
 
