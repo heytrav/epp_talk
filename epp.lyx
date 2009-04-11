@@ -788,10 +788,8 @@ Infos concernant l'organisation / le demandeur
 \end_layout
 
 \begin_layout LyX-Code
-
                   
 \size tiny
-\lang english
 
 \begin_inset ERT
 status open
@@ -816,10 +814,8 @@ vdots
 \end_layout
 
 \begin_layout LyX-Code
-
                   
 \size tiny
-\lang english
 
 \begin_inset ERT
 status open
@@ -1746,9 +1742,10 @@ status open
 
 \end_inset
 
-Fine tuned locks for accidental deletion and transfer
+Can be easily extended
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -1760,7 +1757,36 @@ status open
 
 \end_inset
 
-Can be easily extended
+Fine tuned locking for protection against:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<10->
+\end_layout
+
+\end_inset
+
+Unwanted transfers
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<11->
+\end_layout
+
+\end_inset
+
+Accidental delete
 \end_layout
 
 \end_deeper
@@ -2228,7 +2254,7 @@ Represent Structure Data
 5cm
 \end_layout
 
-\begin_layout Block
+\begin_layout AlertBlock
 \begin_inset ERT
 status open
 
@@ -3250,10 +3276,10 @@ vdots
 \begin_layout LyX-Code
 
 \size scriptsize
-                       
+                  
 \size tiny
 \color blue
-   <contact:cc>DE</contact:cc>           
+ <contact:cc>DE</contact:cc>           
 \end_layout
 
 \begin_layout LyX-Code
@@ -3640,6 +3666,20 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
 \size footnotesize
 nl
 \end_layout
@@ -3722,18 +3762,48 @@ Summary
 \begin_layout Itemize
 
 \color none
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
 Few standard domain registration protocols
 \end_layout
 
 \begin_layout Itemize
 
 \color none
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
 EPP is promising effort to improve situation.
 \end_layout
 
 \begin_layout Itemize
 
 \color none
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
 Several major registries switching to EPP
 \end_layout
 
