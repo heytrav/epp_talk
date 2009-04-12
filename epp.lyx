@@ -3419,7 +3419,7 @@ Trend towards EPP
 \end_layout
 
 \begin_layout BeginFrame
-EPP for the Masses
+The rush to EPP
 \end_layout
 
 \begin_layout Block
@@ -3652,22 +3652,8 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<6->
-\end_layout
-
-\end_inset
-
-
 \size footnotesize
-nl
+it
 \end_layout
 
 \begin_layout Itemize
@@ -3733,6 +3719,8 @@ status open
 
 \begin_deeper
 \begin_layout Standard
+
+\size footnotesize
 .aero, .mobi, .ag, .au, .br, .bz, .cz, .gi, .gr, .hn, .in, .me, .mn, .pl, .ro, .sc
 \end_layout
 
