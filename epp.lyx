@@ -461,7 +461,7 @@ status open
 
 
 \backslash
-onslide<1>
+onslide<1,2,3>
 \end_layout
 
 \end_inset
@@ -479,6 +479,17 @@ onslide<1>
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -675,6 +686,17 @@ status open
 
 \begin_layout Plain Layout
 
+<3->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 {
 \end_layout
 
@@ -808,7 +830,7 @@ status open
 
 
 \backslash
-onslide<2>
+onslide<4,5>
 \end_layout
 
 \end_inset
@@ -826,6 +848,17 @@ onslide<2>
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -927,6 +960,17 @@ DNS=nshost3.st2.lyceu.net
 \end_layout
 
 \begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -3314,11 +3358,9 @@ onslide<14>{
 
 \begin_layout Plain Layout
 
+
 \backslash
-put(
-122,20
-\lang english
-){
+put(122,20){
 \backslash
 makebox{
 \backslash
