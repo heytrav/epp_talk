@@ -3253,11 +3253,7 @@ vector(-1,0){10}}
 
 \begin_layout Plain Layout
 
-}
-\end_layout
-
-\begin_layout Plain Layout
-
+}%
 \end_layout
 
 \begin_layout Plain Layout
@@ -3294,6 +3290,22 @@ vector(0,-1){40}}
 put(148,45){
 \backslash
 circle*{5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+put(
+130,20
+\lang english
+){
+\backslash
+makebox{
+\backslash
+texttt{
+disconnected
+\lang english
+}}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3569,23 +3581,25 @@ Standard ok response
 \size tiny
      
 \color green
- <result code="1000">       
+ 
+\color red
+<result code="1000">       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
           <msg>Command completed successfully</msg>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
-      </result>
+\color red
+      </result> 
 \color inherit
-     
+    
 \end_layout
 
 \begin_layout LyX-Code
@@ -3835,15 +3849,15 @@ l/epp/domain-1.0">
 \begin_layout LyX-Code
 
 \size tiny
-         
-\color green
-<domain:infData>         
+        
+\color red
+ <domain:infData>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
              <domain:name>culd-2009-04-14-11-20-test.eu</domain:name>   
       
 \end_layout
@@ -3851,49 +3865,49 @@ l/epp/domain-1.0">
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
              <domain:roid>5682180-EURID</domain:roid>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
              <domain:status s="ok"/>  
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
              <domain:registrant>c10310981</domain:registrant>
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
              <domain:contact type="billing">c49007</domain:contact>
 \end_layout
 
 \begin_layout LyX-Code
- 
+
 \size tiny
-\color green
-          <domain:ns>           
+\color red
+           <domain:ns>           
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
                  <domain:hostAttr>             
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
                     <domain:hostName>ns1.udagdns.net</domain:hostName>   
         
 \end_layout
@@ -3901,22 +3915,24 @@ l/epp/domain-1.0">
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
                  </domain:hostAttr>           
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color green
+\color red
                  <domain:hostAttr>             
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
+\color red
+                      <domain:hostName>ns2.udagdns.net</domain:hostName
 \color green
-                      <domain:hostName>ns2.udagdns.net</domain:hostName> 
+> 
 \end_layout
 
 \begin_layout LyX-Code
@@ -3965,7 +3981,7 @@ status open
 
 
 \backslash
-onslide<10,11>
+onslide<10>
 \end_layout
 
 \end_inset
@@ -3974,6 +3990,9 @@ onslide<10,11>
 \end_layout
 
 \begin_layout Example
+
+\family typewriter
+\size small
 create contact
 \end_layout
 
@@ -4071,7 +4090,9 @@ create contact
 \size scriptsize
       
 \size default
-              
+             
+\size tiny
+ 
 \begin_inset ERT
 status open
 
@@ -4128,6 +4149,157 @@ vdots
  
 \color inherit
     </command> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+</epp> 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<11>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family typewriter
+\size small
+create contact
+\family default
+\size default
+ response
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" xmlns:contact="urn:ietf:params:xml:ns
+:contact-1.0">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+   <response>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+       <result code="1000">       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+           <msg>Command completed successfully</msg>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+        </result>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+     <resData>      
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+       
+\color red
+  <contact:creData>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color red
+            <contact:id>c16</contact:id>        
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color red
+            <contact:crDate>2006-10-06T12:25:38.280Z</contact:crDate>   
+   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color red
+         </contact:creData>
+\color green
+   
+\color inherit
+ 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+     </resData>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+     <trID>
+\size default
+  
+\size tiny
+     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+        <clTRID>clientref-00002</clTRID>        
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+        <svTRID>dnsbe-23</svTRID>    
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+     </trID>   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+  </response> 
 \end_layout
 
 \begin_layout LyX-Code
