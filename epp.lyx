@@ -380,6 +380,10 @@ Communication Barrier
 No Standards for Communication
 \end_layout
 
+\begin_layout Pause
+
+\end_layout
+
 \begin_layout Itemize
 Fax
 \end_layout
@@ -3294,18 +3298,13 @@ circle*{5}}
 
 \begin_layout Plain Layout
 
+
 \backslash
-put(
-130,20
-\lang english
-){
+put(130,20){
 \backslash
 makebox{
 \backslash
-texttt{
-disconnected
-\lang english
-}}}
+texttt{disconnected}}}
 \end_layout
 
 \begin_layout Plain Layout
