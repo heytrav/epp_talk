@@ -395,7 +395,7 @@ Fax
 
 \end_deeper
 \begin_layout Itemize
-Email.
+Email
 \end_layout
 
 \begin_deeper
@@ -2906,7 +2906,7 @@ status open
 
 
 \backslash
-onslide<1,2,4,6,7,12>
+onslide<1,2,4,6,7,12,14>
 \end_layout
 
 \end_inset
@@ -2937,7 +2937,7 @@ begin{picture}(300,200)
 
 
 \backslash
-onslide<1,2,4,6,7,12>{
+onslide<1,2,4,6,7,12,14>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -2977,7 +2977,7 @@ texttt{connect to registry}}}
 
 
 \backslash
-onslide<2,4,6,7,12>{
+onslide<2,4,6,7,12,14>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -3025,7 +3025,7 @@ texttt{<login>}}}
 
 
 \backslash
-onslide<4,6,7,12>{
+onslide<4,6,7,12,14>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -3070,7 +3070,7 @@ rotatebox{-45}{ok?}
 
 
 \backslash
-onslide<6,7,12>{
+onslide<6,7,12,14>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -3189,7 +3189,7 @@ vdots
 
 
 \backslash
-onslide<7,12>{
+onslide<7,12,14>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -3264,7 +3264,7 @@ vector(-1,0){10}}
 
 
 \backslash
-onslide<12>{
+onslide<12,14>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -3298,9 +3298,27 @@ circle*{5}}
 
 \begin_layout Plain Layout
 
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
-put(130,20){
+onslide<14>{
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+put(
+122,20
+\lang english
+){
 \backslash
 makebox{
 \backslash
@@ -3310,10 +3328,6 @@ texttt{disconnected}}}
 \begin_layout Plain Layout
 
 }
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -3581,21 +3595,21 @@ Standard ok response
      
 \color green
  
-\color red
+\color blue
 <result code="1000">       
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
           <msg>Command completed successfully</msg>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
       </result> 
 \color inherit
     
@@ -3850,13 +3864,15 @@ l/epp/domain-1.0">
 \size tiny
         
 \color red
- <domain:infData>         
+ 
+\color blue
+<domain:infData>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
              <domain:name>culd-2009-04-14-11-20-test.eu</domain:name>   
       
 \end_layout
@@ -3864,49 +3880,49 @@ l/epp/domain-1.0">
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
              <domain:roid>5682180-EURID</domain:roid>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
              <domain:status s="ok"/>  
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
              <domain:registrant>c10310981</domain:registrant>
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
              <domain:contact type="billing">c49007</domain:contact>
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
            <domain:ns>           
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
                  <domain:hostAttr>             
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
                     <domain:hostName>ns1.udagdns.net</domain:hostName>   
         
 \end_layout
@@ -3914,24 +3930,24 @@ l/epp/domain-1.0">
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
                  </domain:hostAttr>           
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
                  <domain:hostAttr>             
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
-                      <domain:hostName>ns2.udagdns.net</domain:hostName
+\color blue
+                      <domain:hostName>ns2.udagdns.net</domain:hostName>
 \color green
-> 
+ 
 \end_layout
 
 \begin_layout LyX-Code
@@ -4232,20 +4248,22 @@ create contact
 \size tiny
        
 \color red
-  <contact:creData>         
+  
+\color blue
+<contact:creData>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
             <contact:id>c16</contact:id>        
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
-\color red
+\color blue
             <contact:crDate>2006-10-06T12:25:38.280Z</contact:crDate>   
    
 \end_layout
@@ -4253,10 +4271,10 @@ create contact
 \begin_layout LyX-Code
 
 \size tiny
-\color red
-         </contact:creData>
+\color blue
+         </contact:creData> 
 \color green
-   
+  
 \color inherit
  
 \end_layout
