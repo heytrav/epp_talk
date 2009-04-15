@@ -603,14 +603,14 @@ vdots
 \begin_layout LyX-Code
 
 \size tiny
-3j.
- Numéro de SIREN/SIRET.........................: 48380216100016 
+Serveur(s) de nom secondaire pour le domaine 
 \end_layout
 
 \begin_layout LyX-Code
-                  
-\size tiny
 
+\size tiny
+7a.
+ Serveur secondaire............................: nshost2
 \begin_inset ERT
 status open
 
@@ -618,7 +618,7 @@ status open
 
 
 \backslash
-vdots
+ldots
 \end_layout
 
 \end_inset
@@ -626,9 +626,43 @@ vdots
 
 \end_layout
 
+\begin_layout LyX-Code
+
+\size tiny
+7b.
+ Adresse(s) IP du secondaire...................:  
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+7c.
+ Serveur secondaire............................: nshost3 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+7d.
+ Adresse(s) IP du secondaire...................:
+\end_layout
+
 \end_deeper
 \begin_layout Column
-3cm
+4cm
 \end_layout
 
 \begin_layout ExampleBlock
@@ -734,6 +768,30 @@ vdots
 
 \size tiny
 a-phone:+44.123456789
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+b1-name:Sylvia Boesemueller 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+b1-email:info@united-domains.de 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+b1-phone:+49.8151368670 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+b1-fax:+49.81513686777
 \end_layout
 
 \end_deeper
@@ -2228,7 +2286,7 @@ Computer parseable
 \end_layout
 
 \begin_layout Itemize
-Human Readable (well, kind of)
+Human Readable (kind of)
 \end_layout
 
 \begin_layout Itemize
