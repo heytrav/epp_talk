@@ -2171,6 +2171,31 @@ EPP serialization
 XML: Short and (kind of) painless
 \end_layout
 
+\begin_layout Overprint
+
+\end_layout
+
+\begin_layout Overprint
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<1,2,5>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Definition
 \begin_inset ERT
 status open
@@ -2304,7 +2329,7 @@ status open
 
 \begin_layout Plain Layout
 
-<3->
+<5->
 \end_layout
 
 \end_inset
@@ -2340,11 +2365,522 @@ Very wordy (bandwidth , speed & storage issues)
 \end_layout
 
 \begin_layout Itemize
-Looks scary
+sometimes not 
+\begin_inset Quotes eld
+\end_inset
+
+Human Readable
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<3,4,6>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Structured data
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+family:    
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+  person:
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+          - id:         1
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            firstname:  Homer
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            lastname:   Simpson
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            gender:     male
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+          - id:         2
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            firstname:  Marge
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            lastname:   Simpson
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            gender:     female
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+                
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+          - id:         4
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            firstname:  Lisa
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            lastname:   Simpson
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            gender:     female
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+            parents:     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+                        - id:  1
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+                        - id:  2
+\end_layout
+
+\end_deeper
+\begin_layout Column
+4cm
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4>
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+as XML
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+<family>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+   <person  id=
+\begin_inset Quotes erd
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ gender=
+\begin_inset Quotes erd
+\end_inset
+
+male
+\begin_inset Quotes erd
+\end_inset
+
+>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+       <firstname>Homer</firstname>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+       <lastname>Simpson</lastname>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+   </person>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+   <person  id=
+\begin_inset Quotes erd
+\end_inset
+
+2
+\begin_inset Quotes erd
+\end_inset
+
+ gender=
+\begin_inset Quotes erd
+\end_inset
+
+female
+\begin_inset Quotes erd
+\end_inset
+
+>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+       <firstname>Marge</firstname>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+   
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+   <person  id=
+\begin_inset Quotes erd
+\end_inset
+
+4
+\begin_inset Quotes erd
+\end_inset
+
+ gender=
+\begin_inset Quotes erd
+\end_inset
+
+female
+\begin_inset Quotes erd
+\end_inset
+
+>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+       <firstname>Lisa</firstname>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+     
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+</family>
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6>
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bad example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+<family> <person  id=
+\begin_inset Quotes erd
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ gender=
+\begin_inset Quotes erd
+\end_inset
+
+male
+\begin_inset Quotes erd
+\end_inset
+
+><firstname>Homer</firstname> <lastname>Simpson</lastname> </person>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+<person  id=
+\begin_inset Quotes erd
+\end_inset
+
+2
+\begin_inset Quotes erd
+\end_inset
+
+ gender=
+\begin_inset Quotes erd
+\end_inset
+
+female
+\begin_inset Quotes erd
+\end_inset
+
+><firstname>Marge</firstname><person id=
+\begin_inset Quotes erd
+\end_inset
+
+3
+\begin_inset Quotes erd
+\end_inset
+
+ gender=
+\begin_inset Quotes erd
+\end_inset
+
+male
+\begin_inset Quotes erd
+\end_inset
+
+><firstname>Bart
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+</firstname><lastname>Simpson</lastname><parents><parent id=
+\begin_inset Quotes erd
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+ </family>
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Overprint
+
+\end_layout
+
 \begin_layout Subsection
 Client-Registry EPP Communication
 \end_layout
@@ -2406,12 +2942,27 @@ onslide<1,2,4,6,7,12>{
 \backslash
 put(150,175){
 \backslash
-circle*{5}}
+circle*{5}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+put(110,180){
+\backslash
+makebox{
+\backslash
+texttt{connect to registry}}}
 \end_layout
 
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2429,9 +2980,9 @@ onslide<2,4,6,7,12>{
 
 
 \backslash
-put(150,173.5){
+put(150,173){
 \backslash
-vector(0,-1){23.5}}
+vector(0,-1){23}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2443,6 +2994,34 @@ put(155,160){
 makebox{
 \backslash
 texttt{<login>}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<4,6,7,12>{
 \end_layout
 
 \begin_layout Plain Layout
@@ -2481,10 +3060,6 @@ rotatebox{-45}{ok?}
 \begin_layout Plain Layout
 
 }
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2577,9 +3152,7 @@ linebreak
 
 \begin_layout Plain Layout
 
-
-\backslash
-hfill
+       
 \backslash
 vdots
 \end_layout
@@ -2709,7 +3282,7 @@ texttt{<logout>}}}
 
 
 \backslash
-put(150,90){
+put(148,90){
 \backslash
 vector(0,-1){40}}
 \end_layout
@@ -2718,7 +3291,7 @@ vector(0,-1){40}}
 
 
 \backslash
-put(150,45){
+put(148,45){
 \backslash
 circle*{5}}
 \end_layout
@@ -3060,7 +3633,7 @@ status open
 
 
 \backslash
-onslide<8,10,11>
+onslide<8>
 \end_layout
 
 \end_inset
@@ -3072,7 +3645,7 @@ onslide<8,10,11>
 The 
 \family typewriter
 \size small
-info contact
+info domain
 \family default
 \size default
  command
@@ -3133,29 +3706,35 @@ info contact
 \begin_layout LyX-Code
 
 \size tiny
+        
 \color blue
-          <contact:info>         
+  <domain:info>         
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
 \color blue
-             <contact:id>6051296</contact:id>       
+            <domain:name>culd-2009-04-14-11-20-test.eu</domain:name>    
+   
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
 \color blue
-          </contact:info>     
+          </domain:info>     
 \end_layout
 
 \begin_layout LyX-Code
 
 \size tiny
 \color blue
-      </info>     
+       </info>
+\color inherit
+ 
+\color blue
+   
 \end_layout
 
 \begin_layout LyX-Code
@@ -3194,6 +3773,199 @@ status open
 
 \backslash
 onslide<9>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family typewriter
+info domain
+\family default
+ response
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+<?xml version="1.0" encoding="UTF-8"?> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+<epp xmlns="http://www.eurid.eu/xml/epp/epp-1.0" xmlns:domain="http://www.eurid.eu/xm
+l/epp/domain-1.0">   
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+    <response>    
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+      <result code="1000">       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+         <msg>Command completed successfully</msg>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+      </result>     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+      <resData>       
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+         
+\color green
+<domain:infData>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+             <domain:name>culd-2009-04-14-11-20-test.eu</domain:name>   
+      
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+             <domain:roid>5682180-EURID</domain:roid>         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+             <domain:status s="ok"/>  
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+             <domain:registrant>c10310981</domain:registrant>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+             <domain:contact type="billing">c49007</domain:contact>
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\size tiny
+\color green
+          <domain:ns>           
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+                 <domain:hostAttr>             
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+                    <domain:hostName>ns1.udagdns.net</domain:hostName>   
+        
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+                 </domain:hostAttr>           
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+                 <domain:hostAttr>             
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color green
+                      <domain:hostName>ns2.udagdns.net</domain:hostName> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+                                           
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vdots
+\end_layout
+
+\end_inset
+
+     
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+ </epp>
+\size default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Example
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onslide<10,11>
 \end_layout
 
 \end_inset
